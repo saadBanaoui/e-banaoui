@@ -1,0 +1,8 @@
+title: "Saad El Banaoui"
+description: "Site personnel"
+baseurl: "/mon-site"  # ou "" si ton site est à la racine
+url: "https://saadbanaoui.github.io/e-banaoui/"
+theme: minima
+
+plugins:
+  - jekyll-feed
