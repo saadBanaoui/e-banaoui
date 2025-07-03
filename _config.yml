@@ -2,7 +2,10 @@ title: "Saad El Banaoui"
 description: "Site personnel"
 baseurl: "/mon-site"  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
+twitter_username: saadcode
+github_username: saadelbanaoui
 theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag

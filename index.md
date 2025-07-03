@@ -3,7 +3,6 @@ layout: default
 title: "Accueil"
 ---
 
-<section>
-  <h1>Bienvenue sur mon site</h1>
-  <p>Ce site est maintenant propulsé par Jekyll 🎉</p>
-</section>
+👋 Bonjour, je suis **Saad El Banaoui**.
+Bienvenue sur mon site personnel !
+Découvrez mes projets, mes passions et comment me contacter

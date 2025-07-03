@@ -4,4 +4,8 @@ title: "Contact"
 permalink: /contact/
 ---
 
-📬 Me contacter : [saadelbanaoui@gmail.com](mailto:saadelbanaoui@gmail.com)
+📬 Vous pouvez me contacter via :
+
+- Email : [saadelbanaoui@gmail.com](mailto:saadelbanaoui@gmail.com)
+- Twitter : [@saadcode](https://twitter.com/saadcode)
+- GitHub : [@saadelbanaoui](https://github.com/saadelbanaoui)
