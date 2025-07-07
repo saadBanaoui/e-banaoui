@@ -1,6 +1,6 @@
 title: "Saad El Banaoui"
 description: "Site personnel de Saad El Banaoui"
-baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
+baseurl: ""  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
 
 theme: minima

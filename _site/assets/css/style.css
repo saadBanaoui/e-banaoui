@@ -1007,21 +1007,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: #000;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
-.button:hover, .button:visited {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+.button:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
   text-decoration: none;
 }
 .button--primary {
   background-color: #000;
-  color: #fff;
+  color: #fff !important;
 }
 .button.hero__button {
   font-size: 20px;
@@ -1121,7 +1121,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-.work-modal .work-modal__content .work-modal__actions .button:hover, .work-modal .work-modal__content .work-modal__actions .button:visited {
+.work-modal .work-modal__content .work-modal__actions .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -1234,7 +1234,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 60px;
   text-align: center;
 }
-.work-detail .work-detail__navigation .button:hover, .work-detail .work-detail__navigation .button:visited {
+.work-detail .work-detail__navigation .button:hover {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
@@ -1346,7 +1346,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-.projects-page .project-card .project-card__actions .button:hover, .projects-page .project-card .project-card__actions .button:visited {
+.projects-page .project-card .project-card__actions .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -1364,7 +1364,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-weight: 600;
 }
-.projects-page .projects-page__footer p a:hover, .projects-page .projects-page__footer p a:visited {
+.projects-page .projects-page__footer p a:hover {
   text-decoration: underline;
 }
 

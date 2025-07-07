@@ -39,7 +39,13 @@ layout: base
     </div>
 
     <div class="work-detail__navigation">
-      <a href="/" class="button">← Retour à l'accueil</a>
+      {% if page.back_url %}
+        <a href="{{ page.back_url }}" class="button">← Retour</a>
+      {% elsif page.back_title %}
+        <a href="{{ page.back_url | default: '/works/' }}" class="button">← {{ page.back_title }}</a>
+      {% else %}
+        <a href="{{ page.back_url | default: '/projects/' }}" class="button">← Retour aux projets</a>
+      {% endif %}
     </div>
   </div>
 </article>

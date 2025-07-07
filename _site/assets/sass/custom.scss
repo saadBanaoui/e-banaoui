@@ -166,20 +166,20 @@ h1, h2, h3, h4, h5, h6{
    padding: 10px 20px;
    border-radius: 5px;
    background-color: #000;
-   color: #fff;
+   color: #fff !important;
    text-decoration: none;
    font-size: 16px;
    font-weight: 600;
    transition: all 0.3s ease;
-   &:hover, &:visited{
-      background-color: #fff;
-      color: #000;
-      border: 1px solid #000;
+   &:hover{
+      background-color: #fff !important;
+      color: #000 !important;
+      border: 1px solid #000 !important;
       text-decoration: none;
    }
    &--primary{
       background-color: #000;
-      color: #fff;
+      color: #fff !important;
    }
    &.hero__button{
       font-size: 20px;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6{
             border-radius: 8px;
             transition: all 0.3s ease;
 
-            &:hover, &:visited{
+            &:hover{
                transform: translateY(-2px);
                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             }
@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6{
       text-align: center;
 
       .button{
-         &:hover, &:visited{
+         &:hover{
             background-color: #fff;
             color: #000;
             border: 1px solid #000;
@@ -563,7 +563,7 @@ h1, h2, h3, h4, h5, h6{
             border-radius: 8px;
             transition: all 0.3s ease;
 
-            &:hover, &:visited{
+            &:hover{
                transform: translateY(-2px);
                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             }
@@ -585,7 +585,7 @@ h1, h2, h3, h4, h5, h6{
             text-decoration: none;
             font-weight: 600;
 
-            &:hover, &:visited{
+            &:hover{
                text-decoration: underline;
             }
          }
