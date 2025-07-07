@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+<article class="work-detail">
+  <div class="wrapper-xl">
+    <header class="work-detail__header">
+      <div class="work-detail__meta">
+        <span class="work-detail__type">{{ page.type }}</span>
+        <span class="work-detail__date">{{ page.date | date: "%B %Y" }}</span>
+      </div>
+      <h1 class="work-detail__title">{{ page.title }}</h1>
+      <p class="work-detail__description">{{ page.description }}</p>
+    </header>
+
+    <div class="work-detail__image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
+    </div>
+
+    <div class="work-detail__content">
+      <div class="work-detail__info">
+        <div class="work-detail__info-item">
+          <h3>Technologies utilisées</h3>
+          <p>{{ page.technologies }}</p>
+        </div>
+        <div class="work-detail__info-item">
+          <h3>Durée du projet</h3>
+          <p>{{ page.duration }}</p>
+        </div>
+        <div class="work-detail__info-item">
+          <h3>Rôle</h3>
+          <p>{{ page.role }}</p>
+        </div>
+      </div>
+
+      <div class="work-detail__body">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="work-detail__navigation">
+      <a href="/" class="button">← Retour à l'accueil</a>
+    </div>
+  </div>
+</article>
