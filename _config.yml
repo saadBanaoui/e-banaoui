@@ -1,11 +1,43 @@
 title: "Saad El Banaoui"
-description: "Site personnel"
-baseurl: "/mon-site"  # ou "" si ton site est à la racine
+description: "Site personnel de Saad El Banaoui"
+baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
-twitter_username: saadcode
-github_username: saadelbanaoui
+
 theme: minima
+author:
+  name: "Saad El Banaoui"
+  email: "saad.banaoui@gmail.com"
+  description: "Site personnel de Saad El Banaoui"
+  baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
+  url: "https://saadbanaoui.github.io/e-banaoui/"
+  twitter_username: selbanaoui
+  avatar: "assets/images/loogoSaad.svg"
+
+# Collections
+collections:
+  works:
+    output: true
+    permalink: /works/:name/
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
+
+minima:
+  skin: classic
+  nav_pages:
+    - about.md
+    - projects.md
+    - contact.md
+  date_format: "%b-%d-%Y"
+  show_excerpts: false
+  social_links:
+    - title: Saad at GitHub
+      icon: github
+      url: "https://github.com/saadBanaoui"
+    - title: Saad at X (formerly Twitter)
+      icon: x-twitter
+      url: "https://x.com/selbanaoui"
