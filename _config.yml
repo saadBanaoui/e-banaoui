@@ -19,12 +19,21 @@ collections:
     output: true
     permalink: /works/:name/
 
+# Configuration des logs
+log_level: info  # Réduit les logs de debug
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Configuration Sass
 sass:
   quiet_deps: true
   silence_deprecations: [import]
+
+# Configuration de performance
+incremental: false
+future: false
 
 minima:
   skin: classic

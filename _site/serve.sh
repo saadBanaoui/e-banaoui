@@ -6,4 +6,4 @@ echo "📱 Le site sera disponible sur: http://localhost:4000"
 echo "🔄 Le site se rechargera automatiquement lors des modifications"
 echo ""
 
-bundle exec jekyll serve --livereload --host 0.0.0.0
+bundle exec jekyll serve --livereload --host 0.0.0.0 --log-level info

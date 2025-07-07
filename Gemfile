@@ -8,6 +8,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.4.1"
 gem "webrick" # nécessaire depuis Ruby 3
 gem "minima", "~> 2.5"
+gem "logger" # supprime l'avertissement Ruby 3.5.0
 
 group :jekyll_plugins do
   # Ajoutez ici vos plugins Jekyll si nécessaire

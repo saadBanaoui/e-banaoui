@@ -1,0 +1,14 @@
+# Configuration de production pour GitHub Pages
+log_level: error  # Logs minimaux en production
+
+# Optimisations de performance
+incremental: false
+future: false
+
+# Désactiver les fonctionnalités de développement
+livereload: false
+watch: false
+
+# Configuration pour GitHub Pages
+github:
+  is_project_page: true
