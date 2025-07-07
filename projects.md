@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Projets
-permalink: /projects/
+permalink: /works/
 ---
 
 <div class="projects-page">
