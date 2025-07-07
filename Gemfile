@@ -1,15 +1,13 @@
-# Gemfile
+# Gemfile pour GitHub Pages
 source "https://rubygems.org"
 
-# Si vous voulez utiliser GitHub Pages, décommentez la ligne suivante et commentez les gems Jekyll individuelles
-# gem "github-pages", group: :jekyll_plugins
-
-# Pour le développement local, utilisez ces gems
-gem "jekyll", "~> 4.4.1"
-gem "webrick" # nécessaire depuis Ruby 3
-gem "minima", "~> 2.5"
-gem "logger" # supprime l'avertissement Ruby 3.5.0
+# Utilisez cette configuration pour GitHub Pages
+gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
-  # Ajoutez ici vos plugins Jekyll si nécessaire
+  # Plugins inclus dans github-pages
 end
+
+# Plugins recommandés pour GitHub Pages
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-seo-tag", "~> 2.8"
