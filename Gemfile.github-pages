@@ -1,0 +1,13 @@
+# Gemfile pour GitHub Pages
+source "https://rubygems.org"
+
+# Utilisez cette configuration pour GitHub Pages
+gem "github-pages", group: :jekyll_plugins
+
+group :jekyll_plugins do
+  # Ajoutez ici vos plugins Jekyll si nécessaire
+end
+
+# Plugins recommandés pour GitHub Pages
+gem "jekyll-feed", "~> 0.12"
+gem "jekyll-seo-tag", "~> 2.8"
