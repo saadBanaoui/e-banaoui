@@ -21,6 +21,11 @@ h1, h2, h3, h4, h5, h6{
 }
 .hero{
    text-align: center;
+   padding-top: 50px;
+   padding-bottom: 50px;
+   h1{
+      font-weight: 900;
+   }
    img{
       width: 100px;
       height: auto;
@@ -33,9 +38,41 @@ h1, h2, h3, h4, h5, h6{
    }
 }
 .hero .hero__title {
-   font-size: 80px;
+   font-size: 60px;
+
+   .highlight {
+      background: linear-gradient(45deg, #007acc, #00d4aa);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      position: relative;
+   }
+   .lower{
+      font-size: 0.6em;
+      display: block;
+      margin-top: 10px;
+      font-weight: 700;
+   }
+}
+.subtitle {
+   font-size: 0.6em;
+   font-weight: 400;
+   display: block;
+   margin-top: 10px;
+   margin-bottom: 2rem !important;
 }
 
+
+.hero .hero__role {
+   display: inline-block;
+   background: linear-gradient(45deg, #007acc, #00d4aa);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
 .wrapper-xl{
    max-width: 1220px;
    margin: 0 auto;
