@@ -1,5 +1,5 @@
 title: "Saad El Banaoui"
-description: "Site personnel de Saad El Banaoui"
+description: "Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation."
 baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
 
@@ -7,11 +7,31 @@ theme: minima
 author:
   name: "Saad El Banaoui"
   email: "saad.banaoui@gmail.com"
-  description: "Site personnel de Saad El Banaoui"
+  phone: "+33 7 61 86 10 77"
+  address: "Valence, France"
   baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
   url: "https://saadbanaoui.github.io/e-banaoui/"
   twitter_username: selbanaoui
   avatar: "assets/images/loogoSaad.svg"
+  linkedin: "https://www.linkedin.com/in/saad-el-banaoui-5000000000/"
+  github: "https://github.com/saadBanaoui"
+  x: "https://x.com/selbanaoui"
+  social_links:
+    - title: github
+      icon: github
+      url: "https://github.com/saadBanaoui"
+    - title: linkedin
+      icon: linkedin
+      url: "https://www.linkedin.com/in/saad-el-banaoui-5000000000/"
+    - title: x
+      icon: twitter-x
+      url: "https://x.com/selbanaoui"
+    - title: behance
+      icon: behance
+      url: "https://www.behance.net/saad-el-banaoui"
+    - title: dribbble
+      icon: dribbble
+      url: "https://dribbble.com/saad-el-banaoui"
 
 # Collections
 collections:

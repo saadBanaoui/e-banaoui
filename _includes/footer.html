@@ -1,31 +1,43 @@
 <link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
 
-<footer class="site-footer h-card">
+<footer class="site-footer">
+
   <data class="u-url" value="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col">
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
+      <div class="col">
+        <img src="{{ site.author.avatar | relative_url }}" alt="Saad El Banaoui" class="footer-logo" width="100">
+        <p class="footer-description">{{ site.description | escape }}</p>
+        {%- if site.author %}
+          <ul class="contact-list">
+
+            {% if site.author.email -%}
+              <li><a class="u-email" href="mailto:{{ site.author.email }}"><i class="ri-mail-line"></i> {{ site.author.email }}</a></li>
+            {%- endif %}
+            {% if site.author.address -%}
+              <li><i class="ri-map-pin-line"></i> {{ site.author.address }}</li>
+            {%- endif %}
+            {% if site.author.phone -%}
+              <li><a href="tel:{{ site.author.phone }}"><i class="ri-phone-line"></i> {{ site.author.phone }}</a></li>
+            {%- endif %}
+          </ul>
+        {%- endif %}
+        <hr>
+        {%- include social.html -%}
       </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
+      <div class="col">
+        <form action="" class="form-contact">
+          <input type="text" placeholder="Nom">
+          <input type="email" placeholder="Email">
+          <textarea name="" id="" placeholder="Message"></textarea>
+          <button class="button button--primary" type="submit"><i class="ri-send-plane-line"></i> Envoyer</button>
+        </form>
       </div>
     </div>
 
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
+
 
   </div>
 
