@@ -1,11 +1,14 @@
 <header class="site-header">
 
+  <!-- Progress bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
   <div class="header__wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.title | escape }}" class="avatar" width="100">
+      {% include optimized-image.html src=site.author.avatar alt=site.title class="avatar" width="100" %}
       <!-- {{ site.title | escape }} -->
     </a>
 

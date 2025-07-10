@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Optimisations CLS (Cumulative Layout Shift)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/e-banaoui/assets/css/style.css">
+  </head>
+  <body>
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Optimisations CLS (Cumulative Layout Shift)</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="optimisations-cls-cumulative-layout-shift">Optimisations CLS (Cumulative Layout Shift)</h1>
+
+<p>Ce document décrit les optimisations mises en place pour réduire le CLS de 0.89 à un niveau acceptable (&lt; 0.1).</p>
+
+<h2 id="problèmes-identifiés">Problèmes identifiés</h2>
+
+<ol>
+  <li><strong>Images sans dimensions fixes</strong> - Les images n’avaient pas de dimensions définies</li>
+  <li><strong>Polices web sans preload</strong> - Les polices Google Fonts causaient des shifts</li>
+  <li><strong>Images de fond CSS</strong> - L’image de fond pouvait causer des shifts</li>
+  <li><strong>Éléments sans dimensions réservées</strong> - Certains éléments n’avaient pas d’espace réservé</li>
+</ol>
+
+<h2 id="solutions-implémentées">Solutions implémentées</h2>
+
+<h3 id="1-optimisation-du-chargement-des-polices">1. Optimisation du chargement des polices</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Preload critical fonts to prevent layout shift --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preload"</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Outfit:wght@100..900&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap"</span> <span class="na">as=</span><span class="s">"style"</span> <span class="na">onload=</span><span class="s">"this.onload=null;this.rel='stylesheet'"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;noscript&gt;&lt;link</span> <span class="na">href=</span><span class="s">"https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Outfit:wght@100..900&amp;family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;&lt;/noscript&gt;</span>
+</code></pre></div></div>
+
+<h3 id="2-optimisation-des-images">2. Optimisation des images</h3>
+
+<ul>
+  <li>Ajout de dimensions par défaut (100x100) pour les images sans dimensions</li>
+  <li>Utilisation d’<code class="language-plaintext highlighter-rouge">aspect-ratio</code> pour réserver l’espace</li>
+  <li>Ajout de <code class="language-plaintext highlighter-rouge">object-fit: cover</code> pour maintenir les proportions</li>
+</ul>
+
+<h3 id="3-réservation-despace-pour-les-éléments-critiques">3. Réservation d’espace pour les éléments critiques</h3>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Reserve space for critical elements */</span>
+<span class="nc">.site-header</span> <span class="p">{</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">80px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.hero</span> <span class="p">{</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.post-title</span> <span class="p">{</span>
+  <span class="nl">min-height</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="4-script-doptimisation-cls">4. Script d’optimisation CLS</h3>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">assets/js/cls-optimizer.js</code> :</p>
+<ul>
+  <li>Réserve l’espace pour les images sans dimensions</li>
+  <li>Optimise le chargement des polices</li>
+  <li>Prévient les shifts de layout pour le contenu dynamique</li>
+  <li>Surveille les changements DOM pour prévenir les shifts</li>
+</ul>
+
+<h3 id="5-monitoring-en-développement">5. Monitoring en développement</h3>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">assets/js/cls-monitor.js</code> :</p>
+<ul>
+  <li>Mesure le CLS en temps réel</li>
+  <li>Affiche un indicateur visuel</li>
+  <li>Log les événements de layout shift</li>
+  <li>Aide au débogage</li>
+</ul>
+
+<h2 id="résultats-attendus">Résultats attendus</h2>
+
+<ul>
+  <li><strong>CLS cible</strong> : &lt; 0.1 (bon)</li>
+  <li><strong>CLS actuel</strong> : 0.89 (mauvais)</li>
+  <li><strong>Amélioration attendue</strong> : ~80% de réduction</li>
+</ul>
+
+<h2 id="tests-à-effectuer">Tests à effectuer</h2>
+
+<ol>
+  <li><strong>Test de chargement initial</strong> :
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Lancer le serveur de développement</span>
+bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Vérification des optimisations</strong> :
+    <ul>
+      <li>Ouvrir les DevTools</li>
+      <li>Aller dans l’onglet Performance</li>
+      <li>Mesurer le CLS lors du chargement</li>
+    </ul>
+  </li>
+  <li><strong>Monitoring en temps réel</strong> :
+    <ul>
+      <li>L’indicateur CLS apparaît en haut à droite en développement</li>
+      <li>Vérifier les logs dans la console</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="métriques-à-surveiller">Métriques à surveiller</h2>
+
+<ul>
+  <li><strong>CLS</strong> : Doit être &lt; 0.1</li>
+  <li><strong>LCP</strong> (Largest Contentful Paint) : Doit être &lt; 2.5s</li>
+  <li><strong>FID</strong> (First Input Delay) : Doit être &lt; 100ms</li>
+</ul>
+
+<h2 id="optimisations-futures">Optimisations futures</h2>
+
+<ol>
+  <li><strong>Lazy loading intelligent</strong> pour les images</li>
+  <li><strong>Preload des images critiques</strong></li>
+  <li><strong>Optimisation des polices web</strong> avec <code class="language-plaintext highlighter-rouge">font-display: swap</code></li>
+  <li><strong>Compression des images</strong> en WebP</li>
+  <li><strong>CDN</strong> pour les ressources statiques</li>
+</ol>
+
+<h2 id="commandes-utiles">Commandes utiles</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Rebuild le site</span>
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Serveur de développement</span>
+bundle <span class="nb">exec </span>jekyll serve
+
+<span class="c"># Vérifier les performances</span>
+lighthouse https://localhost:4000/e-banaoui/
+</code></pre></div></div>
+
+<h2 id="notes-importantes">Notes importantes</h2>
+
+<ul>
+  <li>Les optimisations sont actives en production</li>
+  <li>Le monitoring CLS n’est actif qu’en développement</li>
+  <li>Les dimensions d’image sont maintenant obligatoires pour les nouveaux posts</li>
+  <li>Les polices utilisent <code class="language-plaintext highlighter-rouge">font-display: swap</code> pour éviter les shifts</li>
+</ul>
+
+  </div>
+
+</article>
+
+  </body>
+</html>

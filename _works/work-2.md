@@ -2,13 +2,14 @@
 layout: work
 title: "Plateforme de Formation en Ligne"
 type: "Site E-commerce"
-image: "assets/images/works/work-2.png"
+image: "assets/images/works/work-2.webp"
 description: "Plateforme e-commerce complète avec système de paiement intégré et gestion des stocks en temps réel."
 technologies: "Vue.js, Laravel, MySQL, Stripe"
 duration: "4 mois"
 role: "Lead Developer"
 date: 2024-02-20
 order: 2
+
 ---
 
 ## Description du projet

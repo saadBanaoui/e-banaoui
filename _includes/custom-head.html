@@ -4,3 +4,42 @@
   1. Head over to https://realfavicongenerator.net/ to add your own favicons.
   2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
 {% endcomment %}
+
+<!-- CLS Optimizer Script - Load early to prevent layout shift -->
+<script src="{{ '/assets/js/cls-optimizer.js' | relative_url }}"></script>
+
+<!-- CLS Monitor Script - Development only -->
+{% if jekyll.environment == 'development' %}
+<script src="{{ '/assets/js/cls-monitor.js' | relative_url }}"></script>
+{% endif %}
+
+<!-- Scroll Progress Bar Script -->
+<script src="{{ '/assets/js/scroll-progress.js' | relative_url }}" defer></script>
+
+<!-- Preload critical images to prevent layout shift -->
+<link rel="preload" href="{{ '/assets/images/loogoSaad.svg' | relative_url }}" as="image" type="image/svg+xml">
+<link rel="preload" href="{{ '/assets/images/bg.webp' | relative_url }}" as="image" type="image/webp">
+
+<!-- Font display optimization -->
+<style>
+  /* Prevent layout shift for custom fonts */
+  @font-face {
+    font-family: 'Marcellus';
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Outfit';
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-display: swap;
+  }
+
+  /* Reserve space for critical elements */
+  .site-title, .hero__title, .hero__role {
+    font-display: swap;
+  }
+</style>

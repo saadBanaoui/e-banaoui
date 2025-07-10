@@ -2,8 +2,12 @@ function openWorkModal(url, title, type, image, description, technologies, durat
     // Remplir le modal avec les données
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalType').textContent = type;
-    document.getElementById('modalImage').src = image;
-    document.getElementById('modalImage').alt = title;
+
+        // Utiliser directement l'image WebP
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = image; // L'image est déjà en WebP
+    modalImage.alt = title;
+
     document.getElementById('modalDescription').textContent = description;
     document.getElementById('modalTechnologies').textContent = technologies;
     document.getElementById('modalDuration').textContent = duration;
@@ -78,4 +82,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mettre à jour l'état des boutons lors du scroll
     const worksList = document.querySelector('.works__list');
     worksList.addEventListener('scroll', updateButtonStates);
+
+    // Ouvrir la modale au clic sur une image de projet
+    document.querySelectorAll('.work-modal-trigger').forEach(function(img) {
+        img.addEventListener('click', function() {
+            // Récupérer le baseurl depuis la configuration du site
+            const baseurl = '/e-banaoui/';
+            const workUrl = img.getAttribute('data-url');
+
+            openWorkModal(
+                baseurl + workUrl,
+                img.getAttribute('data-title'),
+                img.getAttribute('data-type'),
+                img.getAttribute('data-image'),
+                img.getAttribute('data-description'),
+                img.getAttribute('data-technologies'),
+                img.getAttribute('data-duration'),
+                img.getAttribute('data-role')
+            );
+        });
+    });
 });

@@ -1,9 +1,55 @@
-title: "Saad El Banaoui"
-description: "Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation."
+# Site settings
+# You can use the following variables in your templates:
+#   {{ site.title }}
+#   {{ site.email }}
+#   {{ site.name }}
+#   {{ site.description }}
+#   {{ site.baseurl }}
+#   {{ site.url }}
+#   {{ site.github_url }}
+#   {{ site.twitter_username }}
+#   {{ site.lang }}
+
+# Performance optimizations
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  profile: false
+  ignore:
+    envs: []
+
+# Image optimization
+image_optimization:
+  enabled: true
+  quality: 85
+  progressive: true
+
+# Font optimization
+font_optimization:
+  preload: true
+  display: swap
+
+# CLS optimization
+cls_optimization:
+  enabled: true
+  reserve_space: true
+  aspect_ratio: true
+
+# Site information
+title: Saad El Banaoui
+email: saad.banaoui@gmail.com
+name: Saad El Banaoui
+description: "Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l'usage, pas pour la surconsommation."
 baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
+github_url: "https://github.com/saadbanaoui"
+twitter_username: selbanaoui
+lang: fr
 
-theme: minima
+# Author information
 author:
   name: "Saad El Banaoui"
   email: "saad.banaoui@gmail.com"
@@ -33,18 +79,40 @@ author:
       icon: dribbble
       url: "https://dribbble.com/saad-el-banaoui"
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /misc/:year/:month/:day/:title/
+
 # Collections
 collections:
   works:
     output: true
     permalink: /works/:name/
 
-# Configuration des logs
-log_level: info  # Réduit les logs de debug
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "works"
+    values:
+      layout: "work"
 
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Configuration des logs
+log_level: info  # Réduit les logs de debug
 
 # Configuration Sass
 sass:
@@ -55,6 +123,8 @@ sass:
 incremental: false
 future: false
 
+# Theme configuration
+theme: minima
 minima:
   skin: classic
   nav_pages:
@@ -70,3 +140,13 @@ minima:
     - title: Saad at X (formerly Twitter)
       icon: x-twitter
       url: "https://x.com/selbanaoui"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

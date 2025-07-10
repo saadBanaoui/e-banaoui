@@ -2,13 +2,14 @@
 layout: work
 title: "Progressive Web App"
 type: "PWA"
-image: "assets/images/works/work-6.png"
+image: "assets/images/works/work-6.webp"
 description: "Progressive Web App avec fonctionnalités offline, notifications et installation native."
 technologies: "PWA, Service Workers, IndexedDB"
 duration: "2 mois"
 role: "Frontend Developer"
 date: 2024-06-01
 order: 6
+
 ---
 
 ## Description du projet

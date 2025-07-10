@@ -12,7 +12,7 @@
             {% for work in sorted_works %}
             <div class="works__item">
                 <div class="work__item--image">
-                    <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" loading="lazy" onclick="openWorkModal('{{ work.url | relative_url }}', '{{ work.title }}', '{{ work.type }}', '{{ work.image | relative_url }}', '{{ work.description }}', '{{ work.technologies }}', '{{ work.duration }}', '{{ work.role }}')">
+                    {% include optimized-image.html src=work.image alt=work.title class="work-modal-trigger" data_url=work.url data_title=work.title data_type=work.type data_image=work.image data_description=work.description data_technologies=work.technologies data_duration=work.duration data_role=work.role %}
                 </div>
                 <div class="work__item--content">
                     <span class="work__item--type">{{ work.type }}</span>

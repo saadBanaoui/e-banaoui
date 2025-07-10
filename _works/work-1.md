@@ -2,13 +2,14 @@
 layout: work
 title: "Application Web E-commerce"
 type: "Application Web"
-image: "assets/images/works/work-1.png"
+image: "assets/images/works/work-1.webp"
 description: "Une application web moderne développée avec les dernières technologies. Ce projet met en avant mes compétences en développement frontend et backend."
 technologies: "React, Node.js, MongoDB, AWS"
 duration: "3 mois"
 role: "Développeur Full-Stack"
 date: 2024-01-15
 order: 1
+
 ---
 
 ## Description du projet

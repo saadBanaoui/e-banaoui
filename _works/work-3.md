@@ -2,13 +2,14 @@
 layout: work
 title: "Application de Livraison"
 type: "Application Mobile"
-image: "assets/images/works/work-3.png"
+image: "assets/images/works/work-3.webp"
 description: "Application mobile native pour iOS et Android avec synchronisation cloud et notifications push."
 technologies: "React Native, Firebase, Redux"
 duration: "6 mois"
 role: "Mobile Developer"
 date: 2024-03-10
 order: 3
+
 ---
 
 ## Description du projet

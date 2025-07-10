@@ -9,6 +9,8 @@
   background-color: $background-color;
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
+  /* Reserve space to prevent layout shift */
+  min-height: 80px;
 }
 
 .site-title {
@@ -17,6 +19,8 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  /* Reserve space for title */
+  min-height: 1.2em;
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -32,6 +36,8 @@
   float: right;
   border: none;
   background-color: inherit;
+  /* Reserve space for navigation */
+  min-height: 60px;
 
   label[for="nav-trigger"], #nav-trigger {
     display: none;

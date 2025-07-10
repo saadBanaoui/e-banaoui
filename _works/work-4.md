@@ -2,13 +2,14 @@
 layout: work
 title: "Dashboard Analytics"
 type: "Dashboard Analytics"
-image: "assets/images/works/work-4.png"
+image: "assets/images/works/work-4.webp"
 description: "Dashboard interactif pour l'analyse de données avec visualisations avancées et rapports personnalisés."
 technologies: "Angular, D3.js, Python, PostgreSQL"
 duration: "2 mois"
 role: "Data Engineer"
 date: 2024-04-05
 order: 4
+
 ---
 
 ## Description du projet

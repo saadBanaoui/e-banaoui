@@ -2,13 +2,14 @@
 layout: work
 title: "API REST Microservices"
 type: "API REST"
-image: "assets/images/works/work-5.png"
+image: "assets/images/works/work-5.webp"
 description: "API REST robuste avec authentification JWT, documentation Swagger et tests automatisés."
 technologies: "Express.js, JWT, Swagger, Jest"
 duration: "1 mois"
 role: "Backend Developer"
 date: 2024-05-12
 order: 5
+
 ---
 
 ## Description du projet

@@ -1,0 +1,28 @@
+{% comment %}
+  Include pour afficher des images optimisées en WebP
+  Usage: {% include optimized-image.html src="path/to/image" alt="description" class="optional-class" %}
+{% endcomment %}
+
+<picture>
+  <!-- Version mobile WebP si disponible -->
+  <source srcset="{{ include.src | replace: '.webp', '-mobile.webp' | relative_url }}" type="image/webp" media="(max-width: 768px)">
+  <!-- Version WebP standard -->
+  <source srcset="{{ include.src | relative_url }}" type="image/webp">
+  <!-- Fallback vers WebP standard si pas de version mobile -->
+  <img src="{{ include.src | relative_url }}"
+       alt="{{ include.alt }}"
+       class="{{ include.class }}"
+       loading="lazy"
+       {% if include.width %}width="{{ include.width }}"{% else %}width="100"{% endif %}
+       {% if include.height %}height="{{ include.height }}"{% else %}height="100"{% endif %}
+       {% if include.data_url %}data-url="{{ include.data_url }}"{% endif %}
+       {% if include.data_title %}data-title="{{ include.data_title }}"{% endif %}
+       {% if include.data_type %}data-type="{{ include.data_type }}"{% endif %}
+       {% if include.data_image %}data-image="{{ include.data_image }}"{% endif %}
+       {% if include.data_description %}data-description="{{ include.data_description }}"{% endif %}
+       {% if include.data_technologies %}data-technologies="{{ include.data_technologies }}"{% endif %}
+       {% if include.data_duration %}data-duration="{{ include.data_duration }}"{% endif %}
+       {% if include.data_role %}data-role="{{ include.data_role }}"{% endif %}
+       style="aspect-ratio: 1; object-fit: cover;"
+  >
+</picture>

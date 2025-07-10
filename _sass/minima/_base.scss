@@ -10,10 +10,7 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
-
 }
-
-
 
 /**
  * Basic styling
@@ -32,9 +29,9 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
+  /* Prevent layout shift */
+  font-display: swap;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -58,17 +55,16 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-
-
 /**
  * Images
  */
 img {
   max-width: 100%;
   vertical-align: middle;
+  /* Prevent layout shift */
+  height: auto;
+  display: block;
 }
-
-
 
 /**
  * Figures
@@ -80,8 +76,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -97,17 +91,15 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
   font-weight: 500;
+  /* Reserve space for headings to prevent layout shift */
+  min-height: 1.2em;
 }
-
-
 
 /**
  * Links
