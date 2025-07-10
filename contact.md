@@ -44,7 +44,7 @@ permalink: /contact/
     <div class="contact-form-container">
       <div class="contact-form-card">
         <h2>Envoyez-moi un message</h2>
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form class="contact-form"  action="https://formspree.io/f/xblynopa" method="POST">
           <div class="form-group">
             <label for="name">Nom complet *</label>
             <input type="text" id="name" name="name" required>
