@@ -40,7 +40,7 @@ cls_optimization:
 
 # Site information
 title: Saad El Banaoui
-email: saad.banaoui@gmail.com
+email: saadelbanaoui@gmail.com
 name: Saad El Banaoui
 description: "Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l'usage, pas pour la surconsommation."
 baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
@@ -53,7 +53,7 @@ locale: fr_FR
 # Author information
 author:
   name: "Saad El Banaoui"
-  email: "saad.banaoui@gmail.com"
+  email: "saadelbanaoui@gmail.com"
   phone: "+33 7 61 86 10 77"
   address: "Valence, France"
   baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
