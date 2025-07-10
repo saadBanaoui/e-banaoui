@@ -723,3 +723,52 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
 @keyframes breadcrumbFadeIn { from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); } }
 .breadcrumb { animation: breadcrumbFadeIn 0.4s ease-out; }
+
+/* Styles pour la page 404 */
+.error-page { min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; text-align: center; }
+
+.error-page__content { max-width: 800px; margin: 0 auto; }
+
+.error-page__illustration { margin-bottom: 40px; position: relative; }
+
+.error-page__number { font-size: clamp(6rem, 15vw, 12rem); font-weight: 900; color: var(--primary-color); line-height: 1; margin-bottom: 20px; text-shadow: 0 4px 8px rgba(62, 125, 145, 0.2); animation: errorNumberPulse 2s ease-in-out infinite; }
+
+.error-page__icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: clamp(2rem, 5vw, 4rem); color: rgba(255, 239, 204, 0.8); z-index: -1; animation: errorIconFloat 3s ease-in-out infinite; }
+
+.error-page__title { font-size: clamp(2rem, 5vw, 3rem); color: var(--secondary-color); margin-bottom: 20px; font-weight: 600; }
+
+.error-page__description { font-size: 1.2rem; color: #666; margin-bottom: 40px; line-height: 1.6; }
+
+.error-page__suggestions { margin-bottom: 40px; text-align: left; background: rgba(255, 255, 255, 0.8); padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px); }
+
+.error-page__suggestions h2 { font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 20px; text-align: center; }
+
+.error-page__list { list-style: none; padding: 0; margin: 0; }
+
+.error-page__list li { padding: 10px 0; color: #555; position: relative; padding-left: 30px; font-size: 1.1rem; line-height: 1.5; }
+.error-page__list li::before { content: "✓"; position: absolute; left: 0; top: 10px; color: var(--primary-color); font-weight: bold; font-size: 1.2rem; }
+
+.error-page__actions { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+
+.error-page__actions .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-weight: 600; transition: all 0.3s ease; border-radius: 30px; text-decoration: none; font-size: 1rem; }
+.error-page__actions .button i { font-size: 1.1rem; }
+
+.button--secondary { background: transparent; color: var(--secondary-color) !important; border: 2px solid var(--secondary-color); }
+.button--secondary:hover { background: var(--primary-color); color: white; }
+
+/* Animations pour la page 404 */
+@keyframes errorNumberPulse { 0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); } }
+@keyframes errorIconFloat { 0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); } }
+/* Responsive pour la page 404 */
+@media (max-width: 768px) { .error-page { padding: 20px 15px; min-height: 60vh; }
+  .error-page__content { max-width: 100%; }
+  .error-page__suggestions { padding: 20px; margin-bottom: 30px; }
+  .error-page__actions { flex-direction: column; align-items: center; gap: 10px; }
+  .error-page__actions .button { width: 100%; max-width: 280px; justify-content: center; }
+  .error-page__list li { font-size: 1rem; padding-left: 25px; } }
+/* Animation d'entrée pour la page 404 */
+@keyframes errorPageFadeIn { from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); } }
+.error-page { animation: errorPageFadeIn 0.6s ease-out; }

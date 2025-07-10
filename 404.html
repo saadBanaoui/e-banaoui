@@ -1,0 +1,49 @@
+---
+layout: base
+title: "Page non trouvée - 404"
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="wrapper-xl">
+    <div class="error-page__content">
+      <div class="error-page__illustration">
+        <div class="error-page__number">404</div>
+        <div class="error-page__icon">
+          <i class="ri-search-line"></i>
+        </div>
+      </div>
+
+      <div class="error-page__text">
+        <h1 class="error-page__title">Page introuvable</h1>
+        <p class="error-page__description">
+          Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+        </p>
+
+        <div class="error-page__suggestions">
+          <h2>Que pouvez-vous faire ?</h2>
+          <ul class="error-page__list">
+            <li>Vérifiez l'URL dans la barre d'adresse</li>
+            <li>Utilisez la navigation du site</li>
+            <li>Retournez à la page d'accueil</li>
+          </ul>
+        </div>
+
+        <div class="error-page__actions">
+          <a href="{{ '/' | relative_url }}" class="button button--primary">
+            <i class="ri-home-line"></i>
+            Retour à l'accueil
+          </a>
+          <a href="{{ '/works/' | relative_url }}" class="button button--secondary">
+            <i class="ri-briefcase-line"></i>
+            Voir mes projets
+          </a>
+          <a href="{{ '/blog/' | relative_url }}" class="button button--secondary">
+            <i class="ri-article-line"></i>
+            Lire le blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
