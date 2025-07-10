@@ -138,6 +138,11 @@ process_image() {
 echo "🔍 Recherche d'images à optimiser..."
 find assets/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) | while read -r image_file; do
     if [ -f "$image_file" ]; then
+        # Exception pour le favicon.png - ne pas le supprimer
+        if [[ "$image_file" == *"favicon.png" ]]; then
+            echo "🛡️  Favicon.png préservé: $image_file"
+            continue
+        fi
         process_image "$image_file"
     fi
 done
