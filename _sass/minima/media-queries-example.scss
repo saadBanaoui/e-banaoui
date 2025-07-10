@@ -1,0 +1,147 @@
+// =============================================================================
+// EXEMPLES D'UTILISATION DES MEDIA QUERIES
+// =============================================================================
+
+// Exemple 1: Approche mobile-first avec breakpoints
+.responsive-element {
+  // Styles par défaut (mobile)
+  padding: 1rem;
+  font-size: 14px;
+
+  // Tablette et plus
+  @include media-md {
+    padding: 1.5rem;
+    font-size: 16px;
+  }
+
+  // Desktop et plus
+  @include media-lg {
+    padding: 2rem;
+    font-size: 18px;
+  }
+
+  // Large desktop
+  @include media-xl {
+    padding: 2.5rem;
+    font-size: 20px;
+  }
+}
+
+// Exemple 2: Utilisation des mixins spécifiques
+.mobile-specific {
+  @include mobile-only {
+    display: block;
+    width: 100%;
+  }
+}
+
+.tablet-specific {
+  @include tablet-only {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.desktop-specific {
+  @include desktop-only {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Exemple 3: Orientation
+.orientation-aware {
+  @include portrait {
+    flex-direction: column;
+  }
+
+  @include landscape {
+    flex-direction: row;
+  }
+}
+
+// Exemple 4: Retina displays
+.high-res-image {
+  background-image: url('image.jpg');
+
+  @include retina {
+    background-image: url('image@2x.jpg');
+  }
+}
+
+// Exemple 5: Container responsive
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include media-sm {
+    max-width: map-get($container-max-widths, sm);
+  }
+
+  @include media-md {
+    max-width: map-get($container-max-widths, md);
+  }
+
+  @include media-lg {
+    max-width: map-get($container-max-widths, lg);
+  }
+
+  @include media-xl {
+    max-width: map-get($container-max-widths, xl);
+  }
+
+  @include media-xxl {
+    max-width: map-get($container-max-widths, xxl);
+  }
+}
+
+// Exemple 6: Grid system responsive
+.grid-item {
+  width: 100%;
+
+  @include media-sm {
+    width: 50%;
+  }
+
+  @include media-md {
+    width: 33.333%;
+  }
+
+  @include media-lg {
+    width: 25%;
+  }
+}
+
+// Exemple 7: Typography responsive
+.responsive-text {
+  font-size: 1rem;
+  line-height: 1.4;
+
+  @include media-md {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  @include media-lg {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+// Exemple 8: Navigation responsive
+.nav-menu {
+  display: none;
+
+  @include media-lg {
+    display: flex;
+  }
+}
+
+.nav-toggle {
+  display: block;
+
+  @include media-lg {
+    display: none;
+  }
+}

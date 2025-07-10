@@ -39,6 +39,34 @@ create_mobile_version() {
     convert "$input_file" -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
 }
 
+# Fonction pour créer des balises picture avec versions mobile
+create_picture_tags() {
+    local image_file="$1"
+    local dir=$(dirname "$image_file")
+    local filename=$(basename "$image_file")
+    local name_without_ext="${filename%.*}"
+
+    # Ignorer les versions mobile et les logos/icônes
+    if [[ "$filename" == *"-mobile.webp" ]] || [[ "$filename" == *"logo"* ]] || [[ "$filename" == *"icon"* ]] || [[ "$filename" == *"favicon"* ]]; then
+        return
+    fi
+
+    local mobile_file="$dir/${name_without_ext}-mobile.webp"
+
+    # Vérifier si la version mobile existe
+    if [ -f "$mobile_file" ]; then
+        echo "🎨 Création de balises picture pour: $filename"
+
+        # Parcourir les fichiers HTML pour ajouter les balises picture
+        find . -name "*.html" -type f | while read -r file; do
+            if [[ "$file" != *"/_site/"* ]] && [[ "$file" != *"/.git/"* ]] && [[ "$file" != *"/node_modules/"* ]]; then
+                # Remplacer les balises img simples par des balises picture
+                sed -i '' "s|<img[^>]*src=[\"']*[^\"']*$filename[\"']*[^>]*>|<picture><source media=\"(max-width: 767px)\" srcset=\"$mobile_file\"><source media=\"(min-width: 768px)\" srcset=\"$image_file\"><img src=\"$image_file\" alt=\"\"></picture>|g" "$file"
+            fi
+        done
+    fi
+}
+
 # Fonction pour mettre à jour les références d'une image
 update_references() {
     local image_file="$1"
@@ -50,7 +78,7 @@ update_references() {
     echo "🔗 Mise à jour des références pour: $image_file"
 
     # Types de fichiers à traiter
-    local file_extensions=("md" "html" "yml" "yaml")
+    local file_extensions=("md" "html" "yml" "yaml" "css" "scss")
 
     # Parcourir tous les fichiers du projet pour mettre à jour les références
     for ext in "${file_extensions[@]}"; do
@@ -114,15 +142,21 @@ process_image() {
     local output_file="$dir/${name_without_ext}.webp"
     optimize_image "$input_file" "$output_file" "$max_width"
 
-    # Créer la version mobile (sauf pour les logos/icônes)
-    if [[ "$filename" != *"logo"* ]] && [[ "$filename" != *"icon"* ]]; then
+    # Créer la version mobile pour toutes les images (sauf logos/icônes)
+    if [[ "$filename" != *"logo"* ]] && [[ "$filename" != *"icon"* ]] && [[ "$filename" != *"favicon"* ]]; then
         local mobile_file="$dir/${name_without_ext}-mobile.webp"
         create_mobile_version "$input_file" "$mobile_file" "$mobile_width"
+
+        # Mettre à jour les références pour la version mobile aussi
+        update_references "$mobile_file"
     fi
 
     # Mettre à jour les références pour l'image originale et la version WebP
     update_references "$input_file"
     update_references "$output_file"
+
+    # Créer les balises picture avec versions mobile
+    create_picture_tags "$output_file"
 
     # Supprimer le fichier original après conversion réussie
     if [ -f "$output_file" ]; then
@@ -143,6 +177,35 @@ find assets/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \
 done
 
 echo "✅ Toutes les images ont été optimisées et références mises à jour"
+
+# Créer les versions mobile pour les images WebP existantes qui n'en ont pas
+echo "📱 Création des versions mobile pour les images WebP existantes..."
+find assets/images -name "*.webp" -type f | while read -r webp_file; do
+    local dir=$(dirname "$webp_file")
+    local filename=$(basename "$webp_file")
+    local name_without_ext="${filename%.*}"
+
+    # Ignorer les versions mobile existantes et les logos/icônes
+    if [[ "$filename" != *"-mobile.webp" ]] && [[ "$filename" != *"logo"* ]] && [[ "$filename" != *"icon"* ]] && [[ "$filename" != *"favicon"* ]]; then
+        local mobile_file="$dir/${name_without_ext}-mobile.webp"
+
+        # Créer la version mobile si elle n'existe pas
+        if [ ! -f "$mobile_file" ]; then
+            echo "📱 Création version mobile pour: $filename"
+
+            # Définir la largeur mobile selon le type d'image
+            local mobile_width="400"
+            if [[ "$filename" == *"avatar"* ]] || [[ "$filename" == *"profile"* ]]; then
+                mobile_width="150"
+            elif [[ "$dir" == *"works"* ]]; then
+                mobile_width="400"
+            fi
+
+            create_mobile_version "$webp_file" "$mobile_file" "$mobile_width"
+            create_picture_tags "$webp_file"
+        fi
+    fi
+done
 
 # Afficher le résumé des économies
 echo ""
@@ -208,6 +271,22 @@ echo "🖼️  Dossier images: $images_size"
 webp_size=$(du -sh "assets/images"/*.webp "assets/images"/*/*.webp 2>/dev/null | cut -f1 || echo "N/A")
 echo "🎨 Images WebP: $webp_size"
 
+# Afficher le résumé des versions mobile
+echo ""
+echo "📱 Résumé des versions mobile:"
+echo "================================"
+mobile_count=$(find assets/images -name "*-mobile.webp" -type f | wc -l | tr -d ' ')
+echo "📱 Versions mobile créées: $mobile_count"
+
+if [ "$mobile_count" -gt 0 ]; then
+    echo "📱 Liste des versions mobile:"
+    find assets/images -name "*-mobile.webp" -type f | while read -r mobile_file; do
+        size=$(du -h "$mobile_file" | cut -f1)
+        echo "   📱 $(basename "$mobile_file") ($size)"
+    done
+fi
+
 echo ""
 echo "🎉 Optimisation et mise à jour terminées !"
 echo "💡 Toutes les références d'images ont été automatiquement mises à jour pour utiliser les fichiers .webp"
+echo "📱 Les versions mobile ont été créées pour améliorer les performances sur mobile"

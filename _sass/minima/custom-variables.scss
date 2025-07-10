@@ -1,1 +1,126 @@
 // Placeholder to allow overriding predefined variables smoothly.
+
+// =============================================================================
+// BREAKPOINTS - Mobile First Approach
+// =============================================================================
+
+// Breakpoints variables
+$breakpoint-xs: 0;      // Extra small devices (phones, 0px and up)
+$breakpoint-sm: 576px;  // Small devices (landscape phones, 576px and up)
+$breakpoint-md: 768px;  // Medium devices (tablets, 768px and up)
+$breakpoint-lg: 992px;  // Large devices (desktops, 992px and up)
+$breakpoint-xl: 1200px; // Extra large devices (large desktops, 1200px and up)
+$breakpoint-xxl: 1400px; // Extra extra large devices (1400px and up)
+
+// Legacy breakpoints (for backward compatibility)
+$on-palm: $breakpoint-sm;
+$on-laptop: $breakpoint-lg;
+
+// =============================================================================
+// MEDIA QUERY MIXINS
+// =============================================================================
+
+// Mobile-first media query mixins
+@mixin media-xs {
+  @media screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+// Specific device mixins
+@mixin mobile-only {
+  @media screen and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Orientation mixins
+@mixin portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+// High DPI displays
+@mixin retina {
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+         screen and (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+// =============================================================================
+// UTILITY MIXINS
+// =============================================================================
+
+// Container max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Grid system
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+// =============================================================================
+// LEGACY SUPPORT (for existing code)
+// =============================================================================
+
+// Keep the old max-width approach for backward compatibility
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
