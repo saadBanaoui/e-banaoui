@@ -1231,8 +1231,10 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
   border-radius: 8px;
   overflow: hidden;
 }
+.post-item{
 
-.post-image {
+}
+.post-image , .post-item__image {
   width: 100%;
   height: auto;
   display: block;
@@ -1271,5 +1273,33 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
 
   .post-content {
     min-height: 300px;
+  }
+}
+.post-item{
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.post-item__image{
+   margin-top: -20px;
+}
+.post-item__content{
+  padding: 20px;
+  h3{
+   font-size: 18px;
+   a{
+      color: inherit;
+      text-decoration: none;
+   }
+  }
+  .post-item__description{
+   font-size: 14px;
+   margin-bottom: 10px;
+  }
+  .post-item__link{
+   font-size: 14px;
+   margin-bottom: 10px;
   }
 }

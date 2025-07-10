@@ -26,20 +26,21 @@ layout: base
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
-        <div class="post-image">
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="post-image" width="{{ post.image_thumb_width }}" height="{{ post.image_thumb_height }}">
+      <li class="post-item">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="post-item__image" width="{{ post.image_thumb_width }}" height="{{ post.image_thumb_height }}">
+        <div class="post-item__content">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          <p class="post-item__description">{{ post.description }}</p>
+          {%- if site.minima.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+          <a class="post-item__link" href="{{ post.url | relative_url }}">Lire la suite</a>
         </div>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {{ post.description }}
-        {%- if site.minima.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
