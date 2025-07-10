@@ -13,6 +13,10 @@ body {
   min-height: 100vh;
   /* Reserve space for fonts */
   font-display: swap;
+  /* Optimize for LCP */
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
  }
  a{
    color: var(--primary-color);
@@ -50,6 +54,8 @@ img {
   height: auto;
   /* Reserve space for images */
   aspect-ratio: attr(width) / attr(height);
+  /* Optimize for LCP */
+  will-change: transform;
 }
 
 /* Reserve space for hero images */
@@ -67,6 +73,8 @@ h1, h2, h3, h4, h5, h6{
    line-height: 1.2;
    /* Reserve space for headings */
    min-height: 1.2em;
+   /* Optimize for LCP */
+   text-rendering: optimizeSpeed;
 }
 .hero{
    text-align: center;
@@ -74,6 +82,8 @@ h1, h2, h3, h4, h5, h6{
    padding-bottom: 50px;
    /* Reserve space for hero content */
    min-height: 400px;
+   /* Optimize for LCP */
+   contain: layout style paint;
    h1{
       font-weight: 900;
    }
@@ -92,6 +102,9 @@ h1, h2, h3, h4, h5, h6{
    font-size: 60px;
    /* Reserve space for title */
    min-height: 1.2em;
+   /* Optimize for LCP - critical element */
+   contain: layout style;
+   will-change: transform;
 
    .highlight {
       background: linear-gradient(45deg, var(--primary-color), #ffefcc);
@@ -100,6 +113,8 @@ h1, h2, h3, h4, h5, h6{
       -webkit-text-fill-color: transparent;
       font-weight: 800;
       position: relative;
+      /* Optimize gradient rendering */
+      will-change: transform;
    }
    .lower{
       font-size: 0.6em;
@@ -127,6 +142,8 @@ h1, h2, h3, h4, h5, h6{
    margin-bottom: 20px;
    /* Reserve space for role text */
    min-height: 1.2em;
+   /* Optimize for LCP */
+   will-change: transform;
 }
 .wrapper-xl{
    max-width: 1220px;

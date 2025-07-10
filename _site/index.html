@@ -19,20 +19,33 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Saad El Banaoui","url":"https://saadbanaoui.github.io/e-banaoui/"},"description":"Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation.","headline":"Saad El Banaoui","name":"Saad El Banaoui","url":"http://localhost:4000/e-banaoui/"}</script>
 <!-- End Jekyll SEO tag -->
-<!-- Preload critical fonts to prevent layout shift -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></noscript>
+<!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <!-- Preload critical CSS -->
+  <!-- Preload critical fonts with font-display: swap for better LCP -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Preload critical CSS for faster rendering -->
   <link rel="preload" href="/e-banaoui/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link id="main-stylesheet" rel="stylesheet" href="/e-banaoui/assets/css/style.css"></noscript>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload critical images for LCP -->
+  <link rel="preload" href="/e-banaoui/assets/images/loogoSaad.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/e-banaoui/assets/images/bg.webp" as="image" type="image/webp">
+
+  <!-- Load Remix Icons with preconnect -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/e-banaoui/feed.xml" title="Saad El Banaoui" />
 
 <!-- CLS Optimizer Script - Load early to prevent layout shift -->
 <script src="/e-banaoui/assets/js/cls-optimizer.js"></script>
+
+<!-- LCP Monitor Script - Development only -->
+
+<script src="/e-banaoui/assets/js/lcp-monitor.js"></script>
+
 
 <!-- CLS Monitor Script - Development only -->
 
@@ -51,11 +64,6 @@
   /* Prevent layout shift for custom fonts */
   @font-face {
     font-family: 'Marcellus';
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Outfit';
     font-display: swap;
   }
 

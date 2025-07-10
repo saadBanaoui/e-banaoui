@@ -1,6 +1,6 @@
 /**
- * CLS Optimizer - Prevents Cumulative Layout Shift
- * This script helps reduce CLS by managing resource loading and reserving space
+ * CLS Optimizer - Prevents Cumulative Layout Shift and optimizes LCP
+ * This script helps reduce CLS and improve LCP by managing resource loading and reserving space
  */
 
 (function() {
@@ -17,11 +17,14 @@
     // Reserve space for images that don't have dimensions
     reserveImageSpace();
 
-    // Optimize font loading
+    // Optimize font loading for LCP
     optimizeFontLoading();
 
     // Prevent layout shift for dynamic content
     preventDynamicLayoutShift();
+
+    // Optimize LCP elements
+    optimizeLCPElements();
   }
 
   function reserveImageSpace() {
@@ -50,21 +53,32 @@
   function optimizeFontLoading() {
     // Check if fonts are loaded
     if ('fonts' in document) {
-      // Monitor font loading to prevent layout shift
+      // Monitor font loading to prevent layout shift and improve LCP
       const fonts = [
         { family: 'Marcellus', weight: '400' },
-        { family: 'Outfit', weight: '400' },
         { family: 'Source Sans 3', weight: '400' }
       ];
 
       fonts.forEach(font => {
         document.fonts.load(`${font.weight} 16px "${font.family}"`).then(() => {
-          // Font loaded, no layout shift needed
+          // Font loaded, optimize rendering
+          optimizeTextRendering();
         }).catch(() => {
           // Fallback font will be used
         });
       });
     }
+  }
+
+  function optimizeTextRendering() {
+    // Optimize text rendering for LCP elements
+    const lcpElements = document.querySelectorAll('.hero__title, .hero__role, .subtitle');
+
+    lcpElements.forEach(element => {
+      element.style.textRendering = 'optimizeSpeed';
+      element.style.webkitFontSmoothing = 'antialiased';
+      element.style.mozOsxFontSmoothing = 'grayscale';
+    });
   }
 
   function preventDynamicLayoutShift() {
@@ -87,6 +101,29 @@
     navItems.forEach(item => {
       item.style.minHeight = '20px';
     });
+  }
+
+  function optimizeLCPElements() {
+    // Optimize the main LCP element (hero title)
+    const heroTitle = document.querySelector('.hero__title');
+    if (heroTitle) {
+      // Add containment for better performance
+      heroTitle.style.contain = 'layout style';
+      heroTitle.style.willChange = 'transform';
+
+      // Ensure the element is rendered as soon as possible
+      heroTitle.style.display = 'block';
+      heroTitle.style.visibility = 'visible';
+    }
+
+    // Optimize hero role text
+    const heroRole = document.querySelector('.hero__role');
+    if (heroRole) {
+      heroRole.style.willChange = 'transform';
+    }
+
+    // Optimize background image loading
+    optimizeBackgroundImages();
   }
 
   // Monitor for dynamic content changes

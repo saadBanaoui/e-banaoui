@@ -8,6 +8,11 @@
 <!-- CLS Optimizer Script - Load early to prevent layout shift -->
 <script src="{{ '/assets/js/cls-optimizer.js' | relative_url }}"></script>
 
+<!-- LCP Monitor Script - Development only -->
+{% if jekyll.environment == 'development' %}
+<script src="{{ '/assets/js/lcp-monitor.js' | relative_url }}"></script>
+{% endif %}
+
 <!-- CLS Monitor Script - Development only -->
 {% if jekyll.environment == 'development' %}
 <script src="{{ '/assets/js/cls-monitor.js' | relative_url }}"></script>
@@ -25,11 +30,6 @@
   /* Prevent layout shift for custom fonts */
   @font-face {
     font-family: 'Marcellus';
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Outfit';
     font-display: swap;
   }
 
