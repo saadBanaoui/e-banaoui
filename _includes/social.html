@@ -8,7 +8,7 @@
 {%- endfor -%}
 {% unless site.minima.hide_site_feed_link %}
   <li>
-    <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}" target="_blank" title="Subscribe to syndication feed">
+    <a href="{{ site.feed.path | default: 'feed.xml' | relative_url }}" target="_blank" title="Subscribe to syndication feed">
       <i class="ri-rss-line"></i>
     </a>
   </li>
