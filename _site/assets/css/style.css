@@ -466,10 +466,10 @@ table td { border: 1px solid #e7e7e7; }
   .contact-cta { padding: 2rem 1rem; } }
 @media screen and (max-width: 576px) { .contact-container { padding: 1rem 0.5rem; }
   .contact-title { font-size: 1.8rem; }
-  .submit-btn, .cta-btn { width: 100%; justify-content: center; } }
+  .submit-btn, .cta-btn { justify-content: center; } }
 :root { --primary-color: #3e7d91; --secondary-color: #222; --tertiary-color: #ffefcc; }
 
-body { font-family: "Source Sans 3", sans-serif; font-optical-sizing: auto; background-color: #FAFAF8; background-image: url("../images/bg.webp"); /* Prevent layout shift by ensuring minimum height */ min-height: 100vh; /* Reserve space for fonts */ font-display: swap; /* Optimize for LCP */ text-rendering: optimizeSpeed; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: "Source Sans 3", sans-serif; font-optical-sizing: auto; background-color: #FAFAF8; /* Prevent layout shift by ensuring minimum height */ min-height: 100vh; /* Reserve space for fonts */ font-display: swap; /* Optimize for LCP */ text-rendering: optimizeSpeed; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 a { color: var(--primary-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
