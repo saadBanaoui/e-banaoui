@@ -127,7 +127,7 @@
   }
 
   // Monitor for dynamic content changes
-  if ('MutationObserver' in window) {
+  if ('MutationObserver' in window && document.body) {
     const observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         if (mutation.type === 'childList') {
