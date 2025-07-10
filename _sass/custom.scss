@@ -1422,3 +1422,127 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
     }
   }
 }
+
+/* Breadcrumb Styles */
+.breadcrumb {
+  margin: 20px 0 30px 0;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: rgba(62, 125, 145, 0.1);
+    color: var(--primary-color);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  i {
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+}
+
+.breadcrumb__text {
+  color: inherit;
+}
+
+.breadcrumb__current {
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 4px 8px;
+  background-color: rgba(34, 34, 34, 0.05);
+  border-radius: 4px;
+}
+
+.breadcrumb__separator {
+  margin: 0 8px;
+  color: #ccc;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 10px;
+  }
+}
+
+/* Breadcrumb responsive */
+@media (max-width: 768px) {
+  .breadcrumb {
+    margin: 15px 0 20px 0;
+    padding: 12px 15px;
+  }
+
+  .breadcrumb__list {
+    font-size: 13px;
+  }
+
+  .breadcrumb__link {
+    padding: 3px 6px;
+    gap: 4px;
+
+    i {
+      font-size: 10px;
+    }
+  }
+
+  .breadcrumb__current {
+    padding: 3px 6px;
+  }
+
+  .breadcrumb__separator {
+    margin: 0 6px;
+
+    i {
+      font-size: 8px;
+    }
+  }
+}
+
+/* Animation d'entrée pour le breadcrumb */
+@keyframes breadcrumbFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.breadcrumb {
+  animation: breadcrumbFadeIn 0.4s ease-out;
+}
