@@ -1,0 +1,275 @@
+@import "variables";
+
+// Work Detail Page
+.work-detail {
+   padding: $spacing-xxl 0;
+
+   .work-detail__header {
+      margin-bottom: $spacing-xl;
+
+      .work-detail__meta {
+         display: flex;
+         align-items: center;
+         gap: $spacing-md;
+         margin-bottom: $spacing-md;
+
+         .work-detail__type {
+            background-color: $color-background-light;
+            padding: 8px 16px;
+            border-radius: $border-radius-xl;
+            font-size: 14px;
+            color: $color-text-light;
+         }
+
+         .work-detail__date {
+            color: $color-text-lighter;
+            font-size: 14px;
+         }
+      }
+
+      .work-detail__title {
+         font-size: 48px;
+         margin-bottom: $spacing-md;
+      }
+
+      .work-detail__description {
+         font-size: 18px;
+         line-height: 1.6;
+         color: $color-text-light;
+         max-width: 600px;
+      }
+   }
+
+   .work-detail__image {
+      margin-bottom: $spacing-xl;
+
+      img {
+         width: 100%;
+         height: 400px;
+         object-fit: cover;
+         border-radius: $border-radius;
+      }
+   }
+
+   .work-detail__content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: $spacing-xxl;
+
+      .work-detail__info {
+         .work-detail__info-item {
+            margin-bottom: $spacing-lg;
+
+            h3 {
+               font-size: 18px;
+               font-weight: 600;
+               margin-bottom: $spacing-sm;
+               color: $color-text;
+            }
+
+            p {
+               font-size: 16px;
+               color: $color-text-light;
+               line-height: 1.5;
+            }
+         }
+      }
+
+      .work-detail__body {
+         font-size: 16px;
+         line-height: 1.7;
+         color: $color-text;
+
+         h2 {
+            font-size: 28px;
+            margin: $spacing-xl 0 $spacing-md 0;
+            color: $color-primary;
+         }
+
+         h3 {
+            font-size: 22px;
+            margin: $spacing-lg 0 15px 0;
+            color: $color-primary;
+         }
+
+         p {
+            margin-bottom: $spacing-md;
+         }
+
+         ul {
+            margin-bottom: $spacing-md;
+            padding-left: $spacing-md;
+
+            li {
+               margin-bottom: 8px;
+            }
+         }
+      }
+   }
+
+   .work-detail__navigation {
+      margin-top: $spacing-xxl;
+      text-align: center;
+
+      .button {
+         &:hover {
+            background-color: $color-secondary;
+            color: $color-primary;
+            border: 1px solid $color-primary;
+            text-decoration: none;
+         }
+      }
+   }
+}
+
+// Projects Page
+.projects-page {
+   padding: $spacing-xxl 0;
+
+   .projects-page__header {
+      text-align: center;
+      margin-bottom: $spacing-xxl;
+
+      .projects-page__title {
+         font-size: 48px;
+         margin-bottom: $spacing-md;
+      }
+
+      .projects-page__description {
+         font-size: 18px;
+         color: $color-text-light;
+         max-width: 600px;
+         margin: 0 auto;
+         line-height: 1.6;
+      }
+   }
+
+   .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: $spacing-xl;
+      margin-bottom: $spacing-xxl;
+   }
+
+   .project-card {
+      background-color: $color-secondary;
+      border-radius: $border-radius-lg;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: $transition-base;
+
+      &:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-card__image {
+         height: 250px;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+         }
+      }
+
+      &:hover .project-card__image img {
+         transform: scale(1.05);
+      }
+
+      .project-card__content {
+         padding: $spacing-lg;
+      }
+
+      .project-card__meta {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 15px;
+
+         .project-card__type {
+            background-color: $color-background-light;
+            padding: 6px 12px;
+            border-radius: $border-radius-lg;
+            font-size: 12px;
+            color: $color-text-light;
+            font-weight: 500;
+         }
+
+         .project-card__date {
+            font-size: 14px;
+            color: $color-text-lighter;
+         }
+      }
+
+      .project-card__title {
+         font-size: 24px;
+         font-weight: 700;
+         margin-bottom: 15px;
+         line-height: 1.3;
+      }
+
+      .project-card__description {
+         font-size: 16px;
+         line-height: 1.6;
+         color: $color-text-light;
+         margin-bottom: $spacing-md;
+      }
+
+      .project-card__details {
+         margin-bottom: 25px;
+
+         .project-card__detail {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #555;
+
+            strong {
+               color: $color-text;
+            }
+         }
+      }
+
+      .project-card__actions {
+         text-align: center;
+
+         .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: $transition-base;
+
+            &:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+         }
+      }
+   }
+
+   .projects-page__footer {
+      text-align: center;
+      padding-top: $spacing-xl;
+      border-top: 1px solid $color-border;
+
+      p {
+         font-size: 16px;
+         color: $color-text-light;
+
+         a {
+            color: $color-primary;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+}

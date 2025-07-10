@@ -1,0 +1,108 @@
+@import "variables";
+
+// Works section
+.page-content {
+   .works__list {
+      display: flex;
+      gap: $spacing-xl;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+
+      &::-webkit-scrollbar {
+         display: none; /* Chrome, Safari and Opera */
+      }
+
+      padding: $spacing-md 0;
+
+      .works__item {
+         min-width: calc((100% - 80px) / 3);
+         flex-shrink: 0;
+
+         .work__item--image {
+            border-radius: $border-radius;
+            overflow: hidden;
+
+            img {
+               width: 100%;
+               max-width: 400px;
+               height: auto;
+               border-radius: $border-radius;
+               transition: $transition-base;
+               cursor: pointer;
+
+               &:hover {
+                  transform: scale(1.02);
+                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+               }
+            }
+         }
+
+         .work__item--content {
+            padding: $spacing-md;
+
+            .work__item--type {
+               display: flex;
+               align-items: center;
+               gap: $spacing-sm;
+               font-size: 14px;
+               color: $color-text-light;
+               margin-bottom: $spacing-xs;
+            }
+
+            .work__item--title {
+               font-size: 20px;
+               font-weight: 600;
+            }
+         }
+
+         &:hover {
+            img {
+               transform: scale(1.5);
+            }
+         }
+      }
+   }
+
+   .works__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $spacing-xl;
+
+      .works__title {
+         margin: 0;
+      }
+   }
+
+   .works__navigation {
+      display: flex;
+      gap: $spacing-md;
+
+      .works__nav-button {
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         border: 2px solid $color-primary;
+         background-color: transparent;
+         color: $color-primary;
+         font-size: 20px;
+         cursor: pointer;
+         transition: $transition-base;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         &:hover {
+            background-color: $color-primary;
+            color: $color-secondary;
+         }
+
+         &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+         }
+      }
+   }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Structure SCSS - e-banaoui</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/e-banaoui/assets/css/style.css">
+  </head>
+  <body>
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Structure SCSS - e-banaoui</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="structure-scss---e-banaoui">Structure SCSS - e-banaoui</h1>
+
+<p>Cette structure SCSS a été organisée pour améliorer la maintenabilité et la lisibilité du code.</p>
+
+<h2 id="structure-des-fichiers">Structure des fichiers</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assets/sass/
+├── _variables.scss      # Variables globales (couleurs, espacements, etc.)
+├── _base.scss          # Styles de base et typographie
+├── _layout.scss        # Layout et structure générale
+├── _components.scss    # Composants réutilisables (boutons, etc.)
+├── _works.scss         # Styles spécifiques aux works/projets
+├── _modal.scss         # Styles des modales
+├── _pages.scss         # Styles des pages spécifiques
+├── _responsive.scss    # Styles responsive
+├── _main.scss          # Fichier principal qui importe tous les partials
+├── custom.scss         # Fichier compilé par Jekyll
+└── README.md           # Cette documentation
+</code></pre></div></div>
+
+<h2 id="organisation">Organisation</h2>
+
+<h3 id="_variablesscss"><code class="language-plaintext highlighter-rouge">_variables.scss</code></h3>
+<ul>
+  <li>Variables de couleurs</li>
+  <li>Variables d’espacement</li>
+  <li>Variables de typographie</li>
+  <li>Variables de layout</li>
+  <li>Variables de transitions</li>
+  <li>Breakpoints</li>
+</ul>
+
+<h3 id="_basescss"><code class="language-plaintext highlighter-rouge">_base.scss</code></h3>
+<ul>
+  <li>Styles de base du body</li>
+  <li>Typographie (h1-h6)</li>
+  <li>Section hero</li>
+  <li>Utilitaires de layout</li>
+</ul>
+
+<h3 id="_layoutscss"><code class="language-plaintext highlighter-rouge">_layout.scss</code></h3>
+<ul>
+  <li>Header et navigation</li>
+  <li>Liste des posts</li>
+  <li>Structure générale</li>
+</ul>
+
+<h3 id="_componentsscss"><code class="language-plaintext highlighter-rouge">_components.scss</code></h3>
+<ul>
+  <li>Composants réutilisables</li>
+  <li>Boutons</li>
+  <li>Contenu de page</li>
+</ul>
+
+<h3 id="_worksscss"><code class="language-plaintext highlighter-rouge">_works.scss</code></h3>
+<ul>
+  <li>Styles spécifiques aux works</li>
+  <li>Navigation des works</li>
+  <li>Grille des projets</li>
+</ul>
+
+<h3 id="_modalscss"><code class="language-plaintext highlighter-rouge">_modal.scss</code></h3>
+<ul>
+  <li>Styles des modales</li>
+  <li>Overlay</li>
+  <li>Animations</li>
+</ul>
+
+<h3 id="_pagesscss"><code class="language-plaintext highlighter-rouge">_pages.scss</code></h3>
+<ul>
+  <li>Pages de détail des works</li>
+  <li>Page des projets</li>
+  <li>Styles spécifiques aux pages</li>
+</ul>
+
+<h3 id="_responsivescss"><code class="language-plaintext highlighter-rouge">_responsive.scss</code></h3>
+<ul>
+  <li>Media queries</li>
+  <li>Styles pour mobile</li>
+  <li>Adaptations responsive</li>
+</ul>
+
+<h3 id="_mainscss"><code class="language-plaintext highlighter-rouge">_main.scss</code></h3>
+<ul>
+  <li>Fichier principal qui importe tous les partials</li>
+  <li>Ordre d’import logique</li>
+</ul>
+
+<h3 id="customscss"><code class="language-plaintext highlighter-rouge">custom.scss</code></h3>
+<ul>
+  <li>Fichier compilé par Jekyll</li>
+  <li>Importe <code class="language-plaintext highlighter-rouge">_main.scss</code></li>
+</ul>
+
+<h2 id="utilisation">Utilisation</h2>
+
+<p>Le fichier <code class="language-plaintext highlighter-rouge">assets/sass/custom.scss</code> importe <code class="language-plaintext highlighter-rouge">_main.scss</code> qui contient tous les styles organisés. Jekyll compile ce fichier en CSS.</p>
+
+<h2 id="avantages">Avantages</h2>
+
+<ol>
+  <li><strong>Maintenabilité</strong> : Chaque fichier a une responsabilité spécifique</li>
+  <li><strong>Réutilisabilité</strong> : Variables centralisées</li>
+  <li><strong>Lisibilité</strong> : Code organisé et documenté</li>
+  <li><strong>Évolutivité</strong> : Facile d’ajouter de nouveaux composants</li>
+  <li><strong>Performance</strong> : Compilation optimisée</li>
+</ol>
+
+<h2 id="conventions">Conventions</h2>
+
+<ul>
+  <li>Utiliser les variables définies dans <code class="language-plaintext highlighter-rouge">_variables.scss</code></li>
+  <li>Respecter l’ordre d’import dans <code class="language-plaintext highlighter-rouge">_main.scss</code></li>
+  <li>Documenter les nouvelles fonctionnalités</li>
+  <li>Tester sur mobile et desktop</li>
+</ul>
+
+  </div>
+
+</article>
+
+  </body>
+</html>

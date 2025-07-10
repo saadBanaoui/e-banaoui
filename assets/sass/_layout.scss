@@ -1,0 +1,30 @@
+@import "variables";
+
+// Header
+.header__wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: $spacing-sm;
+   max-width: $max-width;
+   margin: 0 auto;
+}
+
+// Post list
+.post-list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: $spacing-md;
+
+   li {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      padding: $spacing-md;
+      border-radius: $border-radius;
+      background-color: $color-secondary;
+      transition: $transition-base;
+
+      &:hover {
+         transform: translateY(-10px);
+      }
+   }
+}

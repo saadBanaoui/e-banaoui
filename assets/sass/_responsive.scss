@@ -1,0 +1,40 @@
+@import "variables";
+
+// Responsive styles
+@media (max-width: $breakpoint-mobile) {
+   .work-modal {
+      width: 100%;
+   }
+
+   .work-detail {
+      .work-detail__content {
+         grid-template-columns: 1fr;
+         gap: $spacing-xl;
+      }
+
+      .work-detail__title {
+         font-size: 32px;
+      }
+   }
+
+   .projects-page {
+      .projects-grid {
+         grid-template-columns: 1fr;
+         gap: $spacing-lg;
+      }
+
+      .projects-page__title {
+         font-size: 32px;
+      }
+
+      .project-card {
+         .project-card__content {
+            padding: $spacing-md;
+         }
+
+         .project-card__title {
+            font-size: 20px;
+         }
+      }
+   }
+}

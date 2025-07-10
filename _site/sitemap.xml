@@ -1,61 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui/</loc>
-<lastmod>2025-07-04T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/misc/2025/07/05/SEO-SXO-5-bonnes-pratiques/</loc>
-<lastmod>2025-07-05T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/misc/2025/07/06/designer-web-ia-menace-ou-reinvente/</loc>
-<lastmod>2025-07-06T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-1/</loc>
-<lastmod>2024-01-15T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-2/</loc>
-<lastmod>2024-02-20T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-3/</loc>
-<lastmod>2024-03-10T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-4/</loc>
-<lastmod>2024-04-05T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-5/</loc>
-<lastmod>2024-05-12T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-6/</loc>
-<lastmod>2024-06-01T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/work-7/</loc>
-<lastmod>2024-06-01T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/about/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/blog/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/contact/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/works/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/e-banaoui/CLS_OPTIMIZATION/</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil -->
+  <url>
+    <loc>http://localhost:4000</loc>
+    <lastmod>2025-07-10T14:44:58+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages principales -->
+  <url>
+    <loc>http://localhost:4000/about/</loc>
+    <lastmod>2025-07-10T14:44:58+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:4000/blog/</loc>
+    <lastmod>2025-07-10T14:44:58+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:4000/works/</loc>
+    <lastmod>2025-07-10T14:44:58+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>http://localhost:4000/contact/</loc>
+    <lastmod>2025-07-10T14:44:58+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Articles de blog -->
+  
+  <url>
+    <loc>http://localhost:4000/misc/2025/07/06/designer-web-ia-menace-ou-reinvente/</loc>
+    <lastmod>2025-07-06T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/misc/2025/07/05/SEO-SXO-5-bonnes-pratiques/</loc>
+    <lastmod>2025-07-05T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/misc/2025/07/04/Bonjour-sur-e-banaoui/</loc>
+    <lastmod>2025-07-04T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+
+  <!-- Projets/Works -->
+  
+  <url>
+    <loc>http://localhost:4000/works/work-1/</loc>
+    <lastmod>2024-01-15T00:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-2/</loc>
+    <lastmod>2024-02-20T00:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-3/</loc>
+    <lastmod>2024-03-10T00:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-4/</loc>
+    <lastmod>2024-04-05T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-5/</loc>
+    <lastmod>2024-05-12T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-6/</loc>
+    <lastmod>2024-06-01T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/works/work-7/</loc>
+    <lastmod>2024-06-01T00:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>
