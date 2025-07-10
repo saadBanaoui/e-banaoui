@@ -24,12 +24,11 @@ layout: base
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
     <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li class="post-item">
         <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="post-item__image" width="{{ post.image_thumb_width }}" height="{{ post.image_thumb_height }}">
         <div class="post-item__content">
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-meta">{{ post.date | date: "%d / %m / %Y" }}</span>
           <h3>
             <a href="{{ post.url | relative_url }}">
               {{ post.title | escape }}

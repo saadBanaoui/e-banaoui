@@ -48,6 +48,7 @@ url: "https://saadbanaoui.github.io/e-banaoui/"
 github_url: "https://github.com/saadbanaoui"
 twitter_username: selbanaoui
 lang: fr
+locale: fr_FR
 
 # Author information
 author:
@@ -131,7 +132,8 @@ minima:
     - about.md
     - projects.md
     - contact.md
-  date_format: "%b-%d-%Y"
+  date_format: "%d %b. %Y"
+  locale: fr_FR
   show_excerpts: false
   social_links:
     - title: Saad at GitHub
