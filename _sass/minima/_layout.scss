@@ -30,15 +30,81 @@
   }
 }
 
+/**
+ * Site navigation
+ */
 .site-nav {
   float: right;
-  border: none;
-  background-color: inherit;
-  /* Reserve space for navigation */
-  min-height: 30px;
+  line-height: $base-line-height * $base-font-size * 2.25;
 
-  label[for="nav-trigger"], #nav-trigger {
+  .nav-toggle {
     display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1000;
+
+    &:hover {
+      background: rgba($brand-color, 0.1);
+    }
+
+    .hamburger {
+      width: 24px;
+      height: 18px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: $brand-color;
+        border-radius: 1px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+      }
+    }
+
+    &.active {
+      .hamburger {
+        .line {
+          &:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+          }
+          &:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 998;
+    opacity: 0;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .nav-item {
@@ -46,12 +112,11 @@
     font-family: "Marcellus", sans-serif;
     text-decoration: none;
     position: relative;
-    padding: 8px 16px;
+    padding: 0px 16px;
     border-radius: 6px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     letter-spacing: 0.5px;
-
 
     // Effet de focus pour l'accessibilité
     &:focus {
@@ -91,103 +156,128 @@
   }
 
   @include media-query($on-medium) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit * 0.6;
-    background-color: $background-color;
-    border: 1px solid $border-color-01;
-    border-radius: 5px;
-    text-align: right;
+    position: relative;
 
-    label[for="nav-trigger"] {
+    .nav-toggle {
       display: block;
-      float: right;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
-      border-radius: 8px;
-      background: rgba($brand-color, 0.1);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:hover {
-        background: rgba($brand-color, 0.2);
-        transform: scale(1.05);
-      }
     }
 
-    .menu-icon {
-      width: 24px;
-      height: 24px;
-      line-height: 0;
-      text-align: center;
-      color: $brand-color;
-      transition: all 0.3s ease;
-
-      &::before {
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        font-size: 1.2em;
-      }
-
-      > svg path {
-        fill: $border-color-03;
-      }
+    .nav-overlay {
+      display: block;
     }
 
-    #nav-trigger {
-      ~ label[for=nav-trigger] .menu-icon {
+    .nav-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background: rgba($background-color, 0.98);
+      backdrop-filter: blur(20px);
+      border-left: 1px solid rgba($border-color-01, 0.2);
+      flex-direction: column;
+      align-items: stretch;
+      padding: 80px 20px 20px;
+      z-index: 999;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      transform: translateX(100%);
+
+      .nav-item {
+        margin: 0;
+        padding: 0px 8px;
+        border-radius: 12px;
+        font-size: 1.1em;
+        text-align: left;
+        opacity: 0;
+        transform: translateX(30px);
+        position: relative;
+        overflow: hidden;
+        display: block;
+
+        // Effet de ripple au clic
         &::before {
-          content: "\f0c9";
-          font-size: 1.25em;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          background: rgba($brand-color, 0.2);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.6s ease;
         }
-      }
-      ~ .nav-items {
-        clear: both;
-        display: none
-      }
-      &:checked {
-      ~ label[for=nav-trigger] .menu-icon {
-        &::before {
-          content: "\f00d";
-          font-size: 1.5em;
+
+        &:active::before {
+          width: 300px;
+          height: 300px;
         }
-      }
-        ~ .nav-items {
-          display: block;
-          padding: 15px 0;
-          background: rgba($background-color, 0.95);
-          backdrop-filter: blur(10px);
-          border-radius: 8px;
-          margin-top: 10px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
-          .nav-item {
-            margin: 8px 20px;
-            padding: 12px 16px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            display: block;
-            text-align: left;
-
-            // &:hover {
-            //   background-color: rgba($brand-color, 0.1);
-            //   color: $brand-color;
-            //   transform: translateX(5px);
-            // }
-
-            &.active {
-              background-color: $brand-color;
-              color: $background-color;
-              font-weight: 600;
-            }
-          }
+        &:hover {
+          background: rgba($brand-color, 0.1);
+          transform: translateX(5px);
         }
+
+
       }
     }
 
+    &.nav-open {
+      .nav-container {
+        transform: translateX(0);
+      }
+
+      .nav-overlay {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Animation de pulse pour l'indicateur actif
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+// Amélioration de l'accessibilité
+.nav-toggle:focus {
+  outline: 2px solid $brand-color;
+  outline-offset: 2px;
+}
+
+// Animation d'entrée pour les nav-items sur desktop
+@media (min-width: 769px) {
+  .nav-item {
+    animation: slideInFromTop 0.6s ease-out;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

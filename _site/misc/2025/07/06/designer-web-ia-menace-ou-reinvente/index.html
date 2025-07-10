@@ -86,8 +86,14 @@
     font-display: swap;
   }
 </style>
-<!-- Curseur personnalisé -->
+<!-- GSAP pour les animations de navigation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Curseur personnalisé -->
   <script src="/e-banaoui/assets/js/custom-cursor.js" defer></script>
+
+  <!-- Navigation moderne -->
+  <script src="/e-banaoui/assets/js/navigation.js" defer></script>
 
 </head>
 <body><header class="site-header">
@@ -125,18 +131,28 @@
       <!-- Saad El Banaoui -->
     </a>
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon"></span>
-        </label>
+        <!-- Nouveau bouton de menu moderne -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </button>
 
-        <div class="nav-items">
+        <!-- Overlay pour mobile -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Conteneur de navigation -->
+        <div class="nav-container" id="navContainer">
+          <div class="nav-items">
   <a class="nav-item" href="/e-banaoui/about/">CV</a>
   <a class="nav-item" href="/e-banaoui/works/">Projets</a>
   <a class="nav-item" href="/e-banaoui/blog/">Blog</a>
   <a class="nav-item" href="/e-banaoui/contact/">Contact</a>
 </div>
 
+        </div>
       </nav>
   </div>
 </header>
@@ -247,7 +263,7 @@ Mais faut-il y voir une menace ? Ou une transformation de fond, riche d’opport
       <div class="col">
           <ul class="contact-list">
 
-            <li><a class="u-email" href="mailto:saad.banaoui@gmail.com"><i class="ri-mail-line"></i> saad.banaoui@gmail.com</a></li>
+            <li><a class="u-email" href="mailto:saadelbanaoui@gmail.com"><i class="ri-mail-line"></i> saadelbanaoui@gmail.com</a></li>
             <li><i class="ri-map-pin-line"></i> Valence, France</li>
             <li><a href="tel:+33 7 61 86 10 77"><i class="ri-phone-line"></i> +33 7 61 86 10 77</a></li>
           </ul>
