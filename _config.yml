@@ -131,6 +131,7 @@ minima:
   nav_pages:
     - about.md
     - projects.md
+    - blog.md
     - contact.md
   date_format: "%d %b. %Y"
   locale: fr_FR

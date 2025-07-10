@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="home">
+<div class="blog-page">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -20,11 +20,8 @@ layout: base
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
 
-    <!-- Limiter aux 3 derniers posts -->
-    {% assign recent_posts = posts | slice: 0, 3 %}
-
     <ul class="post-list">
-      {%- for post in recent_posts -%}
+      {%- for post in posts -%}
       <li class="post-item">
         <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" class="post-item__image" width="{{ post.image_thumb_width }}" height="{{ post.image_thumb_height }}">
         <div class="post-item__content">
@@ -44,11 +41,30 @@ layout: base
       {%- endfor -%}
     </ul>
 
-    <!-- Bouton "Voir tout" -->
-    {% if posts.size > 3 %}
-    <div class="posts-section__footer">
-      <a href="/blog" class="button button--primary">Voir tout</a>
-    </div>
-    {% endif %}
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Page {{ paginator.previous_page }}">
+              ← Précédent
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">Page {{ paginator.page }} sur {{ paginator.total_pages }}</div></li>
+        {%- if paginator.next_page %}
+          <li>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Page {{ paginator.next_page }}">
+              Suivant →
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
   {%- endif -%}
 </div>
