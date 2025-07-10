@@ -31,13 +31,7 @@ body {
    padding: 10px 30px !important;
    white-space: nowrap;
  }
-.site-header{
-   background-color: transparent;
-   border-color: var(--primary-color);
-   border-bottom: 0;
-   /* Reserve space to prevent layout shift */
-   min-height: 80px;
-}
+
 .header__wrapper{
    display: flex;
    align-items: center;

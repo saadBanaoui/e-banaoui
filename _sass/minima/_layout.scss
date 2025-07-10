@@ -4,11 +4,9 @@
 .site-header {
   position: relative;
   width: 100%;
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  background-color: $background-color;
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
+
+  border-top: 5px solid var(--primary-color);
+  border-bottom: 0;
   /* Reserve space to prevent layout shift */
   min-height: 80px;
 }
@@ -37,7 +35,7 @@
   border: none;
   background-color: inherit;
   /* Reserve space for navigation */
-  min-height: 60px;
+  min-height: 30px;
 
   label[for="nav-trigger"], #nav-trigger {
     display: none;
@@ -45,8 +43,50 @@
 
   .nav-item {
     color: $text-color;
-    &:not(:last-child) {
-      margin-right: $spacing-unit * 0.5;
+    font-family: "Marcellus", sans-serif;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+
+    // Effet de focus pour l'accessibilité
+    &:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    // Indicateur de page active
+    &.active {
+      color: $brand-color;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    // Ligne sous le texte au survol
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background-image: linear-gradient(45deg,  var(--tertiary-color), var(--primary-color), var(--tertiary-color));
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    &:hover::after {
+      width: 80%;
     }
   }
 
@@ -62,22 +102,34 @@
     label[for="nav-trigger"] {
       display: block;
       float: right;
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
       cursor: pointer;
+      border-radius: 8px;
+      background: rgba($brand-color, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: rgba($brand-color, 0.2);
+        transform: scale(1.05);
+      }
     }
 
     .menu-icon {
-      float: right;
-      width: 36px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
       line-height: 0;
-      padding-top: 18px;
       text-align: center;
+      color: $brand-color;
+      transition: all 0.3s ease;
 
       &::before {
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
+        font-size: 1.2em;
       }
 
       > svg path {
@@ -105,24 +157,76 @@
       }
         ~ .nav-items {
           display: block;
-          padding-bottom: 5px;
+          padding: 15px 0;
+          background: rgba($background-color, 0.95);
+          backdrop-filter: blur(10px);
+          border-radius: 8px;
+          margin-top: 10px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
           .nav-item {
-            margin-left: 20px;
-            padding: 5px 10px;
+            margin: 8px 20px;
+            padding: 12px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: left;
+
+            // &:hover {
+            //   background-color: rgba($brand-color, 0.1);
+            //   color: $brand-color;
+            //   transform: translateX(5px);
+            // }
+
+            &.active {
+              background-color: $brand-color;
+              color: $background-color;
+              font-weight: 600;
+            }
           }
         }
       }
     }
 
-    .nav-item {
-      display: block;
-      padding: 5px 0;
-      color: $text-color;
-      line-height: $base-line-height;
-    }
   }
 }
 
+// Amélioration du conteneur nav-items
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include media-query($on-medium) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+// Animation d'entrée pour les nav-items
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Styles globaux pour nav-item avec animation
+.nav-item {
+  animation: fadeInUp 0.3s ease-out;
+
+  // Délai d'animation pour chaque élément
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
 
 
 /**
