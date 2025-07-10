@@ -5,11 +5,14 @@
   <data class="u-url" value="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
+    <img src="{{ site.author.avatar | relative_url }}" alt="Saad El Banaoui" class="footer-logo" width="100">
 
     <div class="footer-col-wrapper">
       <div class="col">
-        <img src="{{ site.author.avatar | relative_url }}" alt="Saad El Banaoui" class="footer-logo" width="100">
         <p class="footer-description">{{ site.description | escape }}</p>
+      </div>
+      <div class="col">
+
         {%- if site.author %}
           <ul class="contact-list">
 
@@ -24,21 +27,11 @@
             {%- endif %}
           </ul>
         {%- endif %}
-        <hr>
-        {%- include social.html -%}
-      </div>
-      <div class="col">
-        <form action="" class="form-contact">
-          <input type="text" placeholder="Nom">
-          <input type="email" placeholder="Email">
-          <textarea name="" id="" placeholder="Message"></textarea>
-          <button class="button button--primary" type="submit"><i class="ri-send-plane-line"></i> Envoyer</button>
-        </form>
+
       </div>
     </div>
-
-
-
+    <hr>
+    {%- include social.html -%}
   </div>
 
 </footer>

@@ -145,13 +145,88 @@
           </a></li><li class="breadcrumb__separator" aria-hidden="true">
           <i class="ri-arrow-right-s-line"></i>
         </li><li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Contact</span></li></ol>
-</nav><p>📬 Vous pouvez me contacter via :</p>
+</nav><div class="contact-container">
+  <div class="contact-header">
+    <h1 class="page-heading">Contactez-moi</h1>
+    <p class="contact-subtitle">Discutons de votre projet et voyons comment je peux vous aider à créer quelque chose d'extraordinaire.</p>
+  </div>
 
-<ul>
-  <li>Email : <a href="mailto:saadelbanaoui@gmail.com">saadelbanaoui@gmail.com</a></li>
-  <li>Twitter : <a href="https://twitter.com/selbanaoui">@selbanaoui</a></li>
-  <li>GitHub : <a href="https://github.com/saadbanaoui">@saadelbanaoui</a></li>
-</ul>
+  <div class="contact-content">
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ri-mail-line"></i></div>
+        <h3>Email</h3>
+        <p><a href="mailto:saadelbanaoui@gmail.com" class="contact-link">saadelbanaoui@gmail.com</a></p>
+        <p class="contact-description">Réponse sous 24h</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ri-twitter-x-line"></i></div>
+        <h3>Twitter</h3>
+        <p><a href="https://twitter.com/selbanaoui" class="contact-link" target="_blank" rel="noopener">@selbanaoui</a></p>
+        <p class="contact-description">Suivez mes actualités</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ri-github-line"></i></div>
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/saadbanaoui" class="contact-link" target="_blank" rel="noopener">@saadelbanaoui</a></p>
+        <p class="contact-description">Découvrez mes projets</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+        <h3>Localisation</h3>
+        <p>France</p>
+        <p class="contact-description">Disponible en remote</p>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <div class="contact-form-card">
+        <h2>Envoyez-moi un message</h2>
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required="" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required="" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet *</label>
+            <select id="subject" name="subject" required="">
+              <option value="">Choisissez un sujet</option>
+              <option value="projet-web">Projet Web</option>
+              <option value="consultation">Consultation</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required="" placeholder="Décrivez votre projet ou votre demande..."></textarea>
+          </div>
+
+          <button type="submit" class="button button--primary">
+            <span>Envoyer le message</span>
+            <i class="ri-send-plane-line"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-cta">
+    <h3>Prêt à démarrer votre projet ?</h3>
+    <p>N'hésitez pas à me contacter pour discuter de vos idées. Je suis toujours ouvert à de nouveaux défis créatifs !</p>
+    <a href="mailto:saadelbanaoui@gmail.com" class="cta-btn">Commencer maintenant <i class="ri-arrow-right-line"></i></a>
+  </div>
+</div>
 
       </div>
     </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
@@ -161,18 +236,23 @@
   <data class="u-url" value="/e-banaoui/"></data>
 
   <div class="wrapper">
+    <img src="/e-banaoui/assets/images/loogoSaad.svg" alt="Saad El Banaoui" class="footer-logo" width="100">
 
     <div class="footer-col-wrapper">
       <div class="col">
-        <img src="/e-banaoui/assets/images/loogoSaad.svg" alt="Saad El Banaoui" class="footer-logo" width="100">
         <p class="footer-description">Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l&#39;usage, pas pour la surconsommation.</p>
+      </div>
+      <div class="col">
           <ul class="contact-list">
 
             <li><a class="u-email" href="mailto:saad.banaoui@gmail.com"><i class="ri-mail-line"></i> saad.banaoui@gmail.com</a></li>
             <li><i class="ri-map-pin-line"></i> Valence, France</li>
             <li><a href="tel:+33 7 61 86 10 77"><i class="ri-phone-line"></i> +33 7 61 86 10 77</a></li>
           </ul>
-        <hr><ul class="social--media--list"><li>
+
+      </div>
+    </div>
+    <hr><ul class="social--media--list"><li>
     <a rel="me" href="https://github.com/saadBanaoui" target="_blank" title="github">
       <span class="ri-github-line"></span>
     </a>
@@ -200,19 +280,6 @@
   </li>
 </ul>
 </div>
-      <div class="col">
-        <form action="" class="form-contact">
-          <input type="text" placeholder="Nom">
-          <input type="email" placeholder="Email">
-          <textarea name="" id="" placeholder="Message"></textarea>
-          <button class="button button--primary" type="submit"><i class="ri-send-plane-line"></i> Envoyer</button>
-        </form>
-      </div>
-    </div>
-
-
-
-  </div>
 
 </footer>
 
