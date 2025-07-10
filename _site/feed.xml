@@ -1,5 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/e-banaoui/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/e-banaoui/" rel="alternate" type="text/html" hreflang="fr" /><updated>2025-07-10T13:37:37+02:00</updated><id>http://localhost:4000/e-banaoui/feed.xml</id><title type="html">Saad El Banaoui</title><subtitle>Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l&apos;usage, pas pour la surconsommation.</subtitle><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><entry><title type="html">Some articles are just so long they deserve a really long title to see if things will break well</title><link href="http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui/" rel="alternate" type="text/html" title="Some articles are just so long they deserve a really long title to see if things will break well" /><published>2025-07-04T00:00:00+02:00</published><updated>2025-07-04T00:00:00+02:00</updated><id>http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui</id><content type="html" xml:base="http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui/"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/e-banaoui/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/e-banaoui/" rel="alternate" type="text/html" hreflang="fr" /><updated>2025-07-10T14:16:21+02:00</updated><id>http://localhost:4000/e-banaoui/feed.xml</id><title type="html">Saad El Banaoui</title><subtitle>Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l&apos;usage, pas pour la surconsommation.</subtitle><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><entry><title type="html">Designer web à l’ère de l’IA : menacé ou réinventé ?</title><link href="http://localhost:4000/e-banaoui/misc/2025/07/06/designer-web-ia-menace-ou-reinvente/" rel="alternate" type="text/html" title="Designer web à l’ère de l’IA : menacé ou réinventé ?" /><published>2025-07-06T00:00:00+02:00</published><updated>2025-07-06T00:00:00+02:00</updated><id>http://localhost:4000/e-banaoui/misc/2025/07/06/designer-web-ia-menace-ou-reinvente</id><content type="html" xml:base="http://localhost:4000/e-banaoui/misc/2025/07/06/designer-web-ia-menace-ou-reinvente/"><![CDATA[<h2 id="introduction">Introduction</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>
+<p>Figma génère des variantes. Framer produit des interfaces avec des prompts. Des IA écrivent du code, du contenu, et même des guidelines UX. Le métier de designer web semble pris dans une vague d’automatisation sans précédent.
+Mais faut-il y voir une menace ? Ou une transformation de fond, riche d’opportunités ?</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.</p>]]></content><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><category term="misc" /><summary type="html"><![CDATA[lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum n]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/e-banaoui/assets/images/posts/post-1.webp" /><media:content medium="image" url="http://localhost:4000/e-banaoui/assets/images/posts/post-1.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<h2 id="ce-que-lia-peut-déjà-faire-très-bien">Ce que l’IA peut déjà faire (très bien)</h2>
+<ul>
+  <li>Générer des wireframes ou des maquettes en quelques secondes.</li>
+  <li>Proposer des alternatives visuelles à partir d’un brief.</li>
+  <li>Accélérer les tâches répétitives : responsive, composants, copy UX…</li>
+  <li>Produire du code front simple (HTML, Tailwind, animations…).</li>
+</ul>
+
+<h2 id="mais-aussi-ce-quelle-ne-fait-pas-encore">Mais aussi, ce qu’elle ne fait pas (encore)</h2>
+<ul>
+  <li>Comprendre un contexte client précis, ses contraintes métier.</li>
+  <li>Faire preuve d’intuition face à des enjeux émotionnels ou stratégiques.</li>
+  <li>Arbitrer des choix entre performance, accessibilité, budget, valeur ajoutée.</li>
+  <li>Assumer une vision de marque, une direction artistique cohérente.</li>
+</ul>
+
+<h2 id="le-designer-augmenté">Le designer augmenté</h2>
+<p>L’IA n’efface pas le rôle du designer. Elle redistribue les compétences :</p>
+
+<ul>
+  <li>Moins d’exécution brute.</li>
+  <li>Plus de vision, de conseil, d’intention.</li>
+  <li>Des soft skills renforcés : écoute, argumentation, éthique, stratégie.</li>
+</ul>
+
+<p>Les designers capables de penser un système, une expérience, un impact — ceux-là ont encore un rôle clé.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>L’IA élimine surtout les pratiques mécaniques. Le design sans recul ni intention risque, lui, de disparaître.</p>
+
+<blockquote>
+  <p>La question n’est pas “l’IA va-t-elle me remplacer ?” mais “ma valeur se limite-t-elle à ce qu’une IA peut faire ?”</p>
+</blockquote>]]></content><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><category term="misc" /><summary type="html"><![CDATA[L’intelligence artificielle bouleverse le métier de designer web. Menace ou opportunité ? Analyse des nouveaux rôles et compétences à l’ère de l’automatisation.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/e-banaoui/assets/images/posts/designer-vs-IA.webp" /><media:content medium="image" url="http://localhost:4000/e-banaoui/assets/images/posts/designer-vs-IA.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SEO &amp;amp; SXO : 5 bonnes pratiques qui servent à la fois l’utilisateur et Google</title><link href="http://localhost:4000/e-banaoui/misc/2025/07/05/SEO-SXO-5-bonnes-pratiques/" rel="alternate" type="text/html" title="SEO &amp;amp; SXO : 5 bonnes pratiques qui servent à la fois l’utilisateur et Google" /><published>2025-07-05T00:00:00+02:00</published><updated>2025-07-05T00:00:00+02:00</updated><id>http://localhost:4000/e-banaoui/misc/2025/07/05/SEO-SXO-5-bonnes-pratiques</id><content type="html" xml:base="http://localhost:4000/e-banaoui/misc/2025/07/05/SEO-SXO-5-bonnes-pratiques/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>Longtemps, le SEO s’est résumé à des mots-clés, des backlinks, et des balises bien placées. Mais aujourd’hui, Google valorise de plus en plus l’expérience utilisateur. Le SXO — Search eXperience Optimization — émerge comme une synthèse entre visibilité et qualité perçue. Bonne nouvelle : ce qui est bon pour les utilisateurs l’est souvent aussi pour le SEO.</p>
+
+<h2 id="1-une-structure-claire-et-bien-balisée">1. Une structure claire et bien balisée</h2>
+<ul>
+  <li>Hiérarchiser les titres (h1 &gt; h2 &gt; h3) pour faciliter la lecture humaine et machine.</li>
+  <li>Créer une navigation cohérente, intuitive, facilement crawlable.</li>
+  <li>Fournir un plan de site propre, un fil d’Ariane clair.</li>
+</ul>
+
+<h2 id="2-un-site-rapide-et-léger">2. Un site rapide et léger</h2>
+<ul>
+  <li>Réduire le poids des images et des fichiers JS/CSS.</li>
+  <li>Supprimer les ressources inutilisées.</li>
+  <li>Utiliser un système de cache performant.</li>
+  <li>Les Core Web Vitals (LCP, CLS, FID) influencent désormais le ranking.</li>
+</ul>
+
+<h2 id="3-penser-mobile-first--responsive">3. Penser mobile-first &amp; responsive</h2>
+<p>Google indexe en mobile-first. Un site mal optimisé sur smartphone est pénalisé.</p>
+
+<p>Un bon responsive design :</p>
+<ul>
+  <li>évite le zoom,</li>
+  <li>conserve la lisibilité,</li>
+  <li>réduit le contenu inutile sur petits écrans.</li>
+</ul>
+
+<h2 id="4-rédiger-pour-lhumain-mais-penser-aux-robots">4. Rédiger pour l’humain, mais penser aux robots</h2>
+<ul>
+  <li>Prioriser la clarté : phrases simples, titres descriptifs.</li>
+  <li>Utiliser les bons mots-clés sans suroptimisation.</li>
+  <li>Structurer les contenus pour la lecture rapide (listes, citations, paragraphes courts).</li>
+</ul>
+
+<h2 id="5-favoriser-laccessibilité">5. Favoriser l’accessibilité</h2>
+<p>Un site accessible bénéficie :</p>
+<ul>
+  <li>à tous les utilisateurs,</li>
+  <li>à l’indexation (grâce aux attributs ARIA, aux descriptions d’images, etc.).</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Un bon SEO ne consiste plus à jouer avec Google, mais à offrir une expérience utile, rapide et compréhensible. Le SXO incarne cette rencontre entre visibilité et intention.</p>
+
+<blockquote>
+  <p>Rendre un site visible, c’est bien. Le rendre pertinent, c’est mieux.</p>
+</blockquote>]]></content><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><category term="misc" /><summary type="html"><![CDATA[Le SXO, c’est l’alliance du SEO et de l’expérience utilisateur. Découvrez 5 pratiques qui améliorent à la fois votre visibilité sur Google et la satisfaction de vos visiteurs.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/e-banaoui/assets/images/posts/seo_sxo.webp" /><media:content medium="image" url="http://localhost:4000/e-banaoui/assets/images/posts/seo_sxo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Le web n’est pas immatériel : comprendre et réduire son empreinte carbone</title><link href="http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui/" rel="alternate" type="text/html" title="Le web n’est pas immatériel : comprendre et réduire son empreinte carbone" /><published>2025-07-04T00:00:00+02:00</published><updated>2025-07-04T00:00:00+02:00</updated><id>http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui</id><content type="html" xml:base="http://localhost:4000/e-banaoui/misc/2025/07/04/Bonjour-sur-e-banaoui/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>Naviguer, scroller, liker : des gestes simples, quotidiens, qui donnent l’illusion d’un monde digital sans matière. Pourtant, chaque clic a un coût. Le web consomme de l’énergie, mobilise des ressources physiques et laisse derrière lui une empreinte carbone bien réelle. Le numérique mondial représente aujourd’hui près de 4 % des émissions de gaz à effet de serre, soit autant que l’aviation civile.</p>
+
+<p>Alors que notre dépendance au web continue de croître, repenser la manière dont nous concevons les sites et les services digitaux devient une responsabilité.</p>
+
+<hr />
+
+<h2 id="où-se-cache-limpact-environnemental-du-web-">Où se cache l’impact environnemental du web ?</h2>
+<p>L’empreinte du web ne se résume pas à un data center lointain. Elle est répartie à chaque étape de la chaîne :</p>
+
+<ul>
+  <li><strong>Les terminaux (smartphones, ordinateurs)</strong> : leur fabrication représente jusqu’à 80 % de leur impact carbone.</li>
+  <li><strong>Les infrastructures réseau</strong> : fibres, antennes, câbles, qui assurent les transferts.</li>
+  <li><strong>Les centres de données</strong> : gros consommateurs d’électricité, surtout si leur énergie n’est pas renouvelable.</li>
+  <li><strong>Les sites eux-mêmes</strong> : plus ils sont lourds, plus ils sollicitent le réseau et les serveurs.</li>
+</ul>
+
+<h2 id="le-rôle-des-designers-et-développeurs">Le rôle des designers et développeurs</h2>
+<p>Chaque décision que nous prenons en UX ou en front-end peut réduire ou alourdir l’empreinte environnementale :</p>
+<ul>
+  <li>Choisir un format d’image léger.</li>
+  <li>Éviter les animations superflues.</li>
+  <li>Réduire les appels externes (scripts, polices).</li>
+  <li>Minimiser les dépendances.</li>
+  <li>Optimiser le chargement (lazy loading, cache, SSR…).</li>
+</ul>
+
+<p>Un site <strong>sobre</strong> n’est pas un site vide. C’est un <strong>site optimisé, ciblé, respectueux</strong>.</p>
+
+<h2 id="léco-conception-web-en-pratique">L’éco-conception web en pratique</h2>
+<p>Quelques principes simples à intégrer :</p>
+
+<ul>
+  <li><strong>Alléger les pages</strong> : viser moins de 1 Mo/page.</li>
+  <li><strong>Réduire le JS non essentiel</strong>.</li>
+  <li><strong>Penser mobile first</strong> pour charger uniquement l’indispensable.</li>
+  <li><strong>Concevoir des parcours simples et efficaces</strong>.</li>
+  <li><strong>Mesurer l’impact</strong> avec des outils comme <strong>EcoIndex.fr ou WebsiteCarbon.com</strong>.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Le web responsable n’est pas une tendance, c’est une nécessité.
+Concevoir des interfaces utiles et légères, c’est mieux pour les utilisateurs — et pour la planète.</p>
+
+<blockquote>
+  <p><strong>Un design plus sobre, c’est moins d’impact. Et souvent, plus d’efficacité</strong>.</p>
+</blockquote>]]></content><author><name>Saad El Banaoui</name><email>saad.banaoui@gmail.com</email></author><category term="misc" /><summary type="html"><![CDATA[Le web n’est pas aussi immatériel qu’il en a l’air. Derrière chaque clic, des ressources sont mobilisées. Découvre comment designers et développeurs peuvent agir concrètement pour un numérique plus sobre.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/e-banaoui/assets/images/posts/webimpact.webp" /><media:content medium="image" url="http://localhost:4000/e-banaoui/assets/images/posts/webimpact.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
