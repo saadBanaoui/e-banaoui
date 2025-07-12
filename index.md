@@ -14,4 +14,10 @@ list_title: "En directe de mon blog"
 
 {% include work-modal.html %}
 
+<!-- GSAP Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- Custom Scripts -->
 <script src="{{ '/assets/js/works.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/scroll-animations.js' | relative_url }}"></script>

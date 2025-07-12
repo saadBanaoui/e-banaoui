@@ -1,0 +1,99 @@
+// Animation styles for GSAP scroll animations
+
+// Ensure smooth animations
+* {
+  will-change: transform, opacity;
+}
+
+// Initial states for animations
+.hero,
+.services,
+.works,
+.post-list {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+// Hero section specific animations
+.hero {
+  &__role,
+  &__title,
+  &__button {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+// Services section specific animations
+.services {
+  &__item {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+}
+
+// Works section specific animations
+.works {
+  &__header {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  &__item {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+}
+
+// Blog posts specific animations
+.post-item {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+}
+
+// Smooth transitions for interactive elements
+.services__item,
+.works__item,
+.post-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Loading state
+.page-loading {
+  .hero,
+  .services,
+  .works,
+  .post-list {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero,
+  .services,
+  .works,
+  .post-list,
+  .hero__role,
+  .hero__title,
+  .hero__button,
+  .services__item,
+  .works__header,
+  .works__item,
+  .post-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
