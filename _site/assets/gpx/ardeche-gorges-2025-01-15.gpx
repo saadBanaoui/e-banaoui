@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Saad El Banaoui - e-banaoui" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Balade Ardèche - Route des Gorges</name>
+    <desc>Balade moto dans les gorges de l'Ardèche</desc>
+    <author>
+      <name>Saad El Banaoui</name>
+      <link href="https://saadbanaoui.github.io/e-banaoui/moto/"/>
+    </author>
+    <time>2025-01-15T08:00:00Z</time>
+    <keywords>moto, ardèche, gorges, balade</keywords>
+  </metadata>
+
+  <trk>
+    <name>Route des Gorges de l'Ardèche</name>
+    <desc>Balade moto de Vallon-Pont-d'Arc à Saint-Martin-d'Ardèche</desc>
+    <trkseg>
+      <!-- Point de départ : Vallon-Pont-d'Arc -->
+      <trkpt lat="44.4071" lon="4.3956">
+        <ele>121</ele>
+        <time>2025-01-15T08:00:00Z</time>
+        <name>Départ - Vallon-Pont-d'Arc</name>
+      </trkpt>
+
+      <!-- Pont d'Arc -->
+      <trkpt lat="44.3833" lon="4.4167">
+        <ele>118</ele>
+        <time>2025-01-15T08:15:00Z</time>
+        <name>Pont d'Arc</name>
+      </trkpt>
+
+      <!-- Belvédère de la Madeleine -->
+      <trkpt lat="44.3667" lon="4.4333">
+        <ele>245</ele>
+        <time>2025-01-15T08:45:00Z</time>
+        <name>Belvédère de la Madeleine</name>
+      </trkpt>
+
+      <!-- Point de vue sur les gorges -->
+      <trkpt lat="44.3500" lon="4.4500">
+        <ele>280</ele>
+        <time>2025-01-15T09:15:00Z</time>
+        <name>Point de vue gorges</name>
+      </trkpt>
+
+      <!-- Arrivée : Saint-Martin-d'Ardèche -->
+      <trkpt lat="44.3333" lon="4.4667">
+        <ele>95</ele>
+        <time>2025-01-15T10:00:00Z</time>
+        <name>Arrivée - Saint-Martin-d'Ardèche</name>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <wpt lat="44.4071" lon="4.3956">
+    <name>Départ - Vallon-Pont-d'Arc</name>
+    <desc>Point de départ de la balade</desc>
+  </wpt>
+
+  <wpt lat="44.3833" lon="4.4167">
+    <name>Pont d'Arc</name>
+    <desc>Arche naturelle de 54m de haut</desc>
+  </wpt>
+
+  <wpt lat="44.3667" lon="4.4333">
+    <name>Belvédère de la Madeleine</name>
+    <desc>Vue panoramique sur les gorges</desc>
+  </wpt>
+
+  <wpt lat="44.3333" lon="4.4667">
+    <name>Saint-Martin-d'Ardèche</name>
+    <desc>Village d'arrivée</desc>
+  </wpt>
+</gpx>

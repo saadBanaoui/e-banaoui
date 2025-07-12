@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Saad El Banaoui - e-banaoui" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Col du Galibier - Route des Géants</name>
+    <desc>Balade moto au col du Galibier (2642m)</desc>
+    <author>
+      <name>Saad El Banaoui</name>
+      <link href="https://saadbanaoui.github.io/e-banaoui/moto/"/>
+    </author>
+    <time>2025-01-10T07:00:00Z</time>
+    <keywords>moto, galibier, alpes, col, montagne</keywords>
+  </metadata>
+
+  <trk>
+    <name>Col du Galibier</name>
+    <desc>Valence → Grenoble → Valloire → Col du Galibier → Bourg-d'Oisans → Grenoble → Valence</desc>
+    <trkseg>
+            <!-- Départ : Valence -->
+      <trkpt lat="44.9333" lon="4.9000">
+        <ele>123</ele>
+        <time>2025-01-10T07:00:00Z</time>
+        <name>Départ - Valence</name>
+      </trkpt>
+
+      <!-- Grenoble -->
+      <trkpt lat="45.1885" lon="5.7245">
+        <ele>212</ele>
+        <time>2025-01-10T08:00:00Z</time>
+        <name>Grenoble</name>
+      </trkpt>
+
+      <!-- Valloire -->
+      <trkpt lat="45.1667" lon="6.4333">
+        <ele>1430</ele>
+        <time>2025-01-10T09:30:00Z</time>
+        <name>Valloire</name>
+      </trkpt>
+
+      <!-- Début ascension -->
+      <trkpt lat="45.1500" lon="6.4500">
+        <ele>1600</ele>
+        <time>2025-01-10T08:45:00Z</time>
+        <name>Début ascension</name>
+      </trkpt>
+
+      <!-- Lacets -->
+      <trkpt lat="45.1300" lon="6.4700">
+        <ele>2000</ele>
+        <time>2025-01-10T09:15:00Z</time>
+        <name>Lacets du Galibier</name>
+      </trkpt>
+
+      <!-- Sommet du Galibier -->
+      <trkpt lat="45.0667" lon="6.4167">
+        <ele>2642</ele>
+        <time>2025-01-10T10:00:00Z</time>
+        <name>Col du Galibier (2642m)</name>
+      </trkpt>
+
+      <!-- Descente -->
+      <trkpt lat="45.0500" lon="6.4000">
+        <ele>2400</ele>
+        <time>2025-01-10T10:30:00Z</time>
+        <name>Descente vers Bourg-d'Oisans</name>
+      </trkpt>
+
+            <!-- Bourg-d'Oisans -->
+      <trkpt lat="45.0500" lon="6.0333">
+        <ele>720</ele>
+        <time>2025-01-10T11:30:00Z</time>
+        <name>Bourg-d'Oisans</name>
+      </trkpt>
+
+      <!-- Retour via Grenoble -->
+      <trkpt lat="45.1885" lon="5.7245">
+        <ele>212</ele>
+        <time>2025-01-10T12:30:00Z</time>
+        <name>Grenoble (retour)</name>
+      </trkpt>
+
+      <!-- Retour Valence -->
+      <trkpt lat="44.9333" lon="4.9000">
+        <ele>123</ele>
+        <time>2025-01-10T14:00:00Z</time>
+        <name>Retour - Valence</name>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <wpt lat="44.9333" lon="4.9000">
+    <name>Valence</name>
+    <desc>Point de départ et d'arrivée</desc>
+  </wpt>
+
+  <wpt lat="45.1885" lon="5.7245">
+    <name>Grenoble</name>
+    <desc>Étape intermédiaire</desc>
+  </wpt>
+
+  <wpt lat="45.1667" lon="6.4333">
+    <name>Valloire</name>
+    <desc>Station de ski, point de départ de l'ascension</desc>
+  </wpt>
+
+  <wpt lat="45.0667" lon="6.4167">
+    <name>Col du Galibier</name>
+    <desc>Sommet à 2642m d'altitude</desc>
+  </wpt>
+
+  <wpt lat="45.0500" lon="6.0333">
+    <name>Bourg-d'Oisans</name>
+    <desc>Ville de la vallée de l'Oisans</desc>
+  </wpt>
+</gpx>

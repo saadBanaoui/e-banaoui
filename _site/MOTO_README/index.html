@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Section Moto - Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/e-banaoui/assets/css/style.css">
+  </head>
+  <body>
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Section Moto - Documentation</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="section-moto---documentation">Section Moto - Documentation</h1>
+
+<p>Cette section dédiée à la passion moto permet de partager vos balades, traces GPX, photos et récits d’aventures sur deux roues.</p>
+
+<h2 id="structure">Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moto.md                    # Page principale de la section moto
+_layouts/
+  ├── moto.html           # Layout pour la page principale
+  └── moto-post.html      # Layout pour les posts de moto
+_posts/
+  └── *.md                # Posts de moto (avec category: moto)
+assets/
+  ├── images/moto/        # Images des balades moto
+  └── gpx/               # Fichiers GPX des traces
+</code></pre></div></div>
+
+<h2 id="créer-un-nouveau-post-de-moto">Créer un nouveau post de moto</h2>
+
+<h3 id="1-créer-le-fichier-post">1. Créer le fichier post</h3>
+
+<p>Créez un nouveau fichier dans <code class="language-plaintext highlighter-rouge">_posts/</code> avec le format : <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-titre-de-la-balade.md</code></p>
+
+<h3 id="2-front-matter-requis">2. Front matter requis</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">moto-post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Titre</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">votre</span><span class="nv"> </span><span class="s">balade"</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Description</span><span class="nv"> </span><span class="s">courte</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">la</span><span class="nv"> </span><span class="s">balade"</span>
+<span class="na">category</span><span class="pi">:</span> <span class="s">moto</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2025-01-15</span>
+<span class="na">distance</span><span class="pi">:</span> <span class="m">180</span>                    <span class="c1"># Distance en km</span>
+<span class="na">duration</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4h30"</span>                 <span class="c1"># Durée de la balade</span>
+<span class="na">region</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ardèche"</span>               <span class="c1"># Région visitée</span>
+<span class="na">weather</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Ensoleillé,</span><span class="nv"> </span><span class="s">25°C"</span>     <span class="c1"># Conditions météo</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/assets/images/moto/votre-image.jpg"</span>
+<span class="na">image_width</span><span class="pi">:</span> <span class="m">1200</span>
+<span class="na">image_height</span><span class="pi">:</span> <span class="m">800</span>
+<span class="na">gpx_file</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/assets/gpx/votre-trace.gpx"</span>  <span class="c1"># Optionnel</span>
+<span class="na">gallery</span><span class="pi">:</span>                         <span class="c1"># Optionnel</span>
+  <span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/assets/images/moto/photo1.jpg"</span>
+    <span class="na">alt</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Description</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">l'image"</span>
+    <span class="na">caption</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Légende</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">la</span><span class="nv"> </span><span class="s">photo"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h3 id="3-métadonnées-optionnelles">3. Métadonnées optionnelles</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">distance</code> : Distance totale en kilomètres</li>
+  <li><code class="language-plaintext highlighter-rouge">duration</code> : Durée de la balade</li>
+  <li><code class="language-plaintext highlighter-rouge">region</code> : Région ou département visité</li>
+  <li><code class="language-plaintext highlighter-rouge">weather</code> : Conditions météorologiques</li>
+  <li><code class="language-plaintext highlighter-rouge">gpx_file</code> : Chemin vers le fichier GPX</li>
+  <li><code class="language-plaintext highlighter-rouge">gallery</code> : Galerie de photos avec légendes</li>
+</ul>
+
+<h3 id="4-contenu-du-post">4. Contenu du post</h3>
+
+<p>Le contenu peut inclure :</p>
+<ul>
+  <li>Description détaillée du parcours</li>
+  <li>Points d’intérêt visités</li>
+  <li>Conseils pour refaire la balade</li>
+  <li>Photos et anecdotes</li>
+  <li>Informations techniques (route, difficulté, etc.)</li>
+</ul>
+
+<h2 id="fichiers-gpx">Fichiers GPX</h2>
+
+<h3 id="format-attendu">Format attendu</h3>
+
+<p>Les fichiers GPX doivent être au format standard et placés dans <code class="language-plaintext highlighter-rouge">assets/gpx/</code>.</p>
+
+<h3 id="structure-recommandée">Structure recommandée</h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;gpx</span> <span class="na">version=</span><span class="s">"1.1"</span> <span class="na">creator=</span><span class="s">"Saad El Banaoui - e-banaoui"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;metadata&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Nom de la balade<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;desc&gt;</span>Description de la balade<span class="nt">&lt;/desc&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>Saad El Banaoui<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"https://saadbanaoui.github.io/e-banaoui/moto/"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;time&gt;</span>2025-01-15T08:00:00Z<span class="nt">&lt;/time&gt;</span>
+    <span class="nt">&lt;keywords&gt;</span>moto, region, balade<span class="nt">&lt;/keywords&gt;</span>
+  <span class="nt">&lt;/metadata&gt;</span>
+
+  <span class="nt">&lt;trk&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Nom du tracé<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;desc&gt;</span>Description du tracé<span class="nt">&lt;/desc&gt;</span>
+    <span class="nt">&lt;trkseg&gt;</span>
+      <span class="nt">&lt;trkpt</span> <span class="na">lat=</span><span class="s">"44.4071"</span> <span class="na">lon=</span><span class="s">"4.3956"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ele&gt;</span>121<span class="nt">&lt;/ele&gt;</span>
+        <span class="nt">&lt;time&gt;</span>2025-01-15T08:00:00Z<span class="nt">&lt;/time&gt;</span>
+        <span class="nt">&lt;name&gt;</span>Point de départ<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;/trkpt&gt;</span>
+      <span class="c">&lt;!-- Autres points... --&gt;</span>
+    <span class="nt">&lt;/trkseg&gt;</span>
+  <span class="nt">&lt;/trk&gt;</span>
+
+  <span class="nt">&lt;wpt</span> <span class="na">lat=</span><span class="s">"44.4071"</span> <span class="na">lon=</span><span class="s">"4.3956"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Point d'intérêt<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;desc&gt;</span>Description du point d'intérêt<span class="nt">&lt;/desc&gt;</span>
+  <span class="nt">&lt;/wpt&gt;</span>
+<span class="nt">&lt;/gpx&gt;</span>
+</code></pre></div></div>
+
+<h2 id="images">Images</h2>
+
+<h3 id="organisation">Organisation</h3>
+
+<ul>
+  <li>Placez les images dans <code class="language-plaintext highlighter-rouge">assets/images/moto/</code></li>
+  <li>Utilisez des formats optimisés (WebP recommandé)</li>
+  <li>Créez des versions mobile si nécessaire</li>
+</ul>
+
+<h3 id="nomenclature">Nomenclature</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">nom-de-la-balade.jpg</code> : Image principale</li>
+  <li><code class="language-plaintext highlighter-rouge">nom-de-la-balade-1.jpg</code>, <code class="language-plaintext highlighter-rouge">nom-de-la-balade-2.jpg</code> : Photos de la galerie</li>
+</ul>
+
+<h2 id="fonctionnalités">Fonctionnalités</h2>
+
+<h3 id="page-principale-moto">Page principale (/moto/)</h3>
+
+<ul>
+  <li>Affichage des dernières balades</li>
+  <li>Statistiques (distance totale, nombre de balades, etc.)</li>
+  <li>Section “Mes motos”</li>
+  <li>Design responsive</li>
+</ul>
+
+<h3 id="posts-individuels">Posts individuels</h3>
+
+<ul>
+  <li>Métadonnées de la balade (distance, durée, région, météo)</li>
+  <li>Galerie photos</li>
+  <li>Téléchargement du fichier GPX</li>
+  <li>Navigation entre les posts</li>
+</ul>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>La section moto est accessible depuis le menu principal du site.</p>
+
+<h2 id="personnalisation">Personnalisation</h2>
+
+<h3 id="styles-css">Styles CSS</h3>
+
+<p>Les styles sont intégrés dans les layouts :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_layouts/moto.html</code> : Styles de la page principale</li>
+  <li><code class="language-plaintext highlighter-rouge">_layouts/moto-post.html</code> : Styles des posts</li>
+</ul>
+
+<h3 id="modifications">Modifications</h3>
+
+<p>Pour modifier l’apparence :</p>
+<ol>
+  <li>Éditez les fichiers de layout</li>
+  <li>Modifiez les styles CSS intégrés</li>
+  <li>Testez avec <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+</ol>
+
+<h2 id="exemples">Exemples</h2>
+
+<h3 id="posts-existants">Posts existants</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_posts/2025-01-15-balade-ardeche.md</code> : Balade dans l’Ardèche</li>
+  <li><code class="language-plaintext highlighter-rouge">_posts/2025-01-10-col-du-galibier.md</code> : Ascension du Galibier</li>
+</ul>
+
+<h3 id="fichiers-gpx-1">Fichiers GPX</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">assets/gpx/ardeche-gorges-2025-01-15.gpx</code> : Trace Ardèche</li>
+  <li><code class="language-plaintext highlighter-rouge">assets/gpx/galibier-2025-01-10.gpx</code> : Trace Galibier</li>
+</ul>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<h3 id="ajouter-une-nouvelle-balade">Ajouter une nouvelle balade</h3>
+
+<ol>
+  <li>Créer le post dans <code class="language-plaintext highlighter-rouge">_posts/</code></li>
+  <li>Ajouter les images dans <code class="language-plaintext highlighter-rouge">assets/images/moto/</code></li>
+  <li>Ajouter le fichier GPX dans <code class="language-plaintext highlighter-rouge">assets/gpx/</code></li>
+  <li>Tester avec <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></li>
+</ol>
+
+<h3 id="mettre-à-jour-les-statistiques">Mettre à jour les statistiques</h3>
+
+<p>Les statistiques sont calculées automatiquement à partir des posts de la catégorie “moto”.</p>
+
+<hr />
+
+<p><em>Cette section moto est conçue pour partager votre passion et permettre à d’autres motards de découvrir vos parcours !</em></p>
+
+  </div>
+
+</article>
+
+  </body>
+</html>

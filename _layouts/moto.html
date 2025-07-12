@@ -1,0 +1,18 @@
+---
+layout: base
+---
+
+<div class="moto-page">
+  {%- if page.title -%}
+    <header class="moto-header">
+      <h1 class="moto-title">{{ page.title }}</h1>
+      {%- if page.description -%}
+        <p class="moto-description">{{ page.description }}</p>
+      {%- endif -%}
+    </header>
+  {%- endif -%}
+
+  <div class="moto-content">
+    {{ content }}
+  </div>
+</div>

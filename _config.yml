@@ -132,6 +132,7 @@ minima:
     - about.md
     - projects.md
     - blog.md
+    - moto.md
     - contact.md
   date_format: "%d %b. %Y"
   locale: fr_FR

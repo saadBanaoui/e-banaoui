@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Saad El Banaoui - e-banaoui" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Galibier → Izoard - Route des Cols Légendaires</name>
+    <desc>Balade moto entre deux cols mythiques des Alpes : Galibier (2642m) et Izoard (2360m)</desc>
+    <author>
+      <name>Saad El Banaoui</name>
+      <link href="https://saadbanaoui.github.io/e-banaoui/moto/"/>
+    </author>
+    <time>2025-01-20T07:00:00Z</time>
+    <keywords>moto, galibier, izoard, alpes, cols, balade</keywords>
+  </metadata>
+
+  <trk>
+    <name>Galibier → Izoard</name>
+    <desc>Valence → Grenoble → Valloire → Galibier → Briançon → Izoard → Gap → Grenoble → Valence</desc>
+    <trkseg>
+            <!-- Départ : Valence -->
+      <trkpt lat="44.9333" lon="4.9000">
+        <ele>123</ele>
+        <time>2025-01-20T07:00:00Z</time>
+        <name>Départ - Valence</name>
+      </trkpt>
+
+      <!-- Grenoble -->
+      <trkpt lat="45.1885" lon="5.7245">
+        <ele>212</ele>
+        <time>2025-01-20T08:00:00Z</time>
+        <name>Grenoble</name>
+      </trkpt>
+
+      <!-- Valloire -->
+      <trkpt lat="45.1667" lon="6.4333">
+        <ele>1430</ele>
+        <time>2025-01-20T09:30:00Z</time>
+        <name>Valloire</name>
+      </trkpt>
+
+      <!-- Début ascension Galibier -->
+      <trkpt lat="45.1500" lon="6.4500">
+        <ele>1600</ele>
+        <time>2025-01-20T08:45:00Z</time>
+        <name>Début ascension Galibier</name>
+      </trkpt>
+
+      <!-- Lacets du Galibier -->
+      <trkpt lat="45.1300" lon="6.4700">
+        <ele>2000</ele>
+        <time>2025-01-20T09:15:00Z</time>
+        <name>Lacets du Galibier</name>
+      </trkpt>
+
+      <!-- Sommet du Galibier -->
+      <trkpt lat="45.0667" lon="6.4167">
+        <ele>2642</ele>
+        <time>2025-01-20T10:00:00Z</time>
+        <name>Col du Galibier (2642m)</name>
+      </trkpt>
+
+      <!-- Descente vers Briançon -->
+      <trkpt lat="45.0500" lon="6.4000">
+        <ele>2400</ele>
+        <time>2025-01-20T10:30:00Z</time>
+        <name>Descente vers Briançon</name>
+      </trkpt>
+
+      <!-- Briançon -->
+      <trkpt lat="44.9000" lon="6.6500">
+        <ele>1326</ele>
+        <time>2025-01-20T11:30:00Z</time>
+        <name>Briançon</name>
+      </trkpt>
+
+      <!-- Début ascension Izoard -->
+      <trkpt lat="44.8500" lon="6.7000">
+        <ele>1500</ele>
+        <time>2025-01-20T12:00:00Z</time>
+        <name>Début ascension Izoard</name>
+      </trkpt>
+
+      <!-- Casse Déserte -->
+      <trkpt lat="44.8000" lon="6.7500">
+        <ele>2200</ele>
+        <time>2025-01-20T12:45:00Z</time>
+        <name>Casse Déserte</name>
+      </trkpt>
+
+      <!-- Sommet de l'Izoard -->
+      <trkpt lat="44.7833" lon="6.7833">
+        <ele>2360</ele>
+        <time>2025-01-20T13:15:00Z</time>
+        <name>Col d'Izoard (2360m)</name>
+      </trkpt>
+
+      <!-- Descente vers Gap -->
+      <trkpt lat="44.7500" lon="6.8000">
+        <ele>2000</ele>
+        <time>2025-01-20T13:45:00Z</time>
+        <name>Descente vers Gap</name>
+      </trkpt>
+
+            <!-- Gap -->
+      <trkpt lat="44.5667" lon="6.0833">
+        <ele>745</ele>
+        <time>2025-01-20T14:30:00Z</time>
+        <name>Gap</name>
+      </trkpt>
+
+      <!-- Retour via Grenoble -->
+      <trkpt lat="45.1885" lon="5.7245">
+        <ele>212</ele>
+        <time>2025-01-20T15:30:00Z</time>
+        <name>Grenoble (retour)</name>
+      </trkpt>
+
+      <!-- Retour Valence -->
+      <trkpt lat="44.9333" lon="4.9000">
+        <ele>123</ele>
+        <time>2025-01-20T17:00:00Z</time>
+        <name>Retour - Valence</name>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <wpt lat="44.9333" lon="4.9000">
+    <name>Valence</name>
+    <desc>Point de départ et d'arrivée</desc>
+  </wpt>
+
+  <wpt lat="45.1885" lon="5.7245">
+    <name>Grenoble</name>
+    <desc>Étape intermédiaire</desc>
+  </wpt>
+
+  <wpt lat="45.1667" lon="6.4333">
+    <name>Valloire</name>
+    <desc>Station de ski, point de départ de l'ascension du Galibier</desc>
+  </wpt>
+
+  <wpt lat="45.0667" lon="6.4167">
+    <name>Col du Galibier</name>
+    <desc>Sommet à 2642m d'altitude, premier col de la balade</desc>
+  </wpt>
+
+  <wpt lat="44.9000" lon="6.6500">
+    <name>Briançon</name>
+    <desc>Ville fortifiée, point de ravitaillement avant l'Izoard</desc>
+  </wpt>
+
+  <wpt lat="44.8000" lon="6.7500">
+    <name>Casse Déserte</name>
+    <desc>Paysage lunaire unique de l'Izoard</desc>
+  </wpt>
+
+  <wpt lat="44.7833" lon="6.7833">
+    <name>Col d'Izoard</name>
+    <desc>Sommet à 2360m d'altitude, deuxième col de la balade</desc>
+  </wpt>
+
+  <wpt lat="44.5667" lon="6.0833">
+    <name>Gap</name>
+    <desc>Ville de la vallée de la Durance, point de ravitaillement</desc>
+  </wpt>
+</gpx>
