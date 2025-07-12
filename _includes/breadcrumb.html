@@ -15,10 +15,15 @@
 {%- elsif page.layout == "work" -%}
   {%- assign breadcrumb_items = breadcrumb_items | push: "Projets" -%}
   {%- assign breadcrumb_items = breadcrumb_items | push: page.title -%}
+{%- elsif page.layout == "moto-post" -%}
+  {%- assign breadcrumb_items = breadcrumb_items | push: "Moto" -%}
+  {%- assign breadcrumb_items = breadcrumb_items | push: page.title -%}
 {%- elsif page.url contains "/blog/" -%}
   {%- assign breadcrumb_items = breadcrumb_items | push: "Blog" -%}
 {%- elsif page.url contains "/works/" -%}
   {%- assign breadcrumb_items = breadcrumb_items | push: "Projets" -%}
+{%- elsif page.url contains "/moto/" -%}
+  {%- assign breadcrumb_items = breadcrumb_items | push: "Moto" -%}
 {%- elsif page.url contains "/about/" -%}
   {%- assign breadcrumb_items = breadcrumb_items | push: "À propos" -%}
 {%- elsif page.url contains "/contact/" -%}
@@ -45,6 +50,8 @@
             {%- assign url = "/blog/" | relative_url -%}
           {%- elsif item == "Projets" -%}
             {%- assign url = "/works/" | relative_url -%}
+          {%- elsif item == "Moto" -%}
+            {%- assign url = "/moto/" | relative_url -%}
           {%- elsif item == "À propos" -%}
             {%- assign url = "/about/" | relative_url -%}
           {%- elsif item == "Contact" -%}
