@@ -20,7 +20,7 @@ optimize_image() {
     echo "🔄 Optimisation de: $input_file"
 
     # Convertir en WebP avec une largeur maximale
-    convert "$input_file" -resize "${max_width}x>" -quality 85 -strip "$output_file"
+    convert "$input_file" -auto-orient -resize "${max_width}x>" -quality 85 -strip "$output_file"
 
     # Afficher les tailles
     original_size=$(du -h "$input_file" | cut -f1)
@@ -36,7 +36,7 @@ create_mobile_version() {
     local mobile_width="$3"
 
     echo "📱 Création version mobile: $mobile_file"
-    convert "$input_file" -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
+    convert "$input_file" -auto-orient -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
 }
 
 # Fonction pour créer des balises picture avec versions mobile

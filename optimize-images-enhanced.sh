@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Script d'optimisation des images pour e-banaoui
-# Ce script convertit les images PNG/JPG en WebP, optimise leur taille et met à jour les références
+# Script d'optimisation des images pour e-banaoui (Version améliorée)
+# Ce script convertit les images PNG/JPG en WebP avec une meilleure gestion de l'orientation
 
-echo "🚀 Début de l'optimisation et mise à jour des images..."
+echo "🚀 Début de l'optimisation et mise à jour des images (Version améliorée)..."
 
 # Créer un dossier de sauvegarde
 mkdir -p assets/images/backup
@@ -11,7 +11,35 @@ find assets/images -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | xargs -I {
 
 echo "📁 Sauvegarde créée dans assets/images/backup/"
 
-# Fonction pour optimiser une image
+# Fonction pour vérifier l'orientation d'une image
+check_orientation() {
+    local input_file="$1"
+
+    # Utiliser identify pour obtenir l'orientation
+    local orientation=$(identify -format "%[orientation]" "$input_file" 2>/dev/null)
+
+    if [ "$orientation" = "TopLeft" ]; then
+        echo "normal"
+    elif [ "$orientation" = "TopRight" ]; then
+        echo "flip-horizontal"
+    elif [ "$orientation" = "BottomRight" ]; then
+        echo "rotate-180"
+    elif [ "$orientation" = "BottomLeft" ]; then
+        echo "flip-vertical"
+    elif [ "$orientation" = "LeftTop" ]; then
+        echo "rotate-90"
+    elif [ "$orientation" = "RightTop" ]; then
+        echo "rotate-90-flip-horizontal"
+    elif [ "$orientation" = "RightBottom" ]; then
+        echo "rotate-270"
+    elif [ "$orientation" = "LeftBottom" ]; then
+        echo "rotate-90-flip-vertical"
+    else
+        echo "normal"
+    fi
+}
+
+# Fonction pour optimiser une image avec gestion de l'orientation
 optimize_image() {
     local input_file="$1"
     local output_file="$2"
@@ -19,24 +47,69 @@ optimize_image() {
 
     echo "🔄 Optimisation de: $input_file"
 
-    # Convertir en WebP avec une largeur maximale
-    convert "$input_file" -auto-orient -resize "${max_width}x>" -quality 85 -strip "$output_file"
+    # Vérifier l'orientation de l'image originale
+    local original_orientation=$(check_orientation "$input_file")
+    echo "   📐 Orientation détectée: $original_orientation"
+
+    # Convertir en WebP avec gestion de l'orientation
+    if [ "$original_orientation" != "normal" ]; then
+        echo "   🔧 Application de la correction d'orientation..."
+        convert "$input_file" -auto-orient -resize "${max_width}x>" -quality 85 -strip "$output_file"
+    else
+        echo "   ✅ Orientation normale, conversion directe..."
+        convert "$input_file" -resize "${max_width}x>" -quality 85 -strip "$output_file"
+    fi
+
+    # Vérifier l'orientation du fichier WebP créé
+    if [ -f "$output_file" ]; then
+        local webp_orientation=$(check_orientation "$output_file")
+        echo "   📐 Orientation WebP: $webp_orientation"
+
+        # Si l'orientation n'est pas normale, corriger
+        if [ "$webp_orientation" != "normal" ]; then
+            echo "   🔧 Correction de l'orientation WebP..."
+            local temp_file="${output_file}.temp"
+            convert "$output_file" -auto-orient -quality 85 "$temp_file"
+            mv "$temp_file" "$output_file"
+        fi
+    fi
 
     # Afficher les tailles
-    original_size=$(du -h "$input_file" | cut -f1)
-    new_size=$(du -h "$output_file" | cut -f1)
-
-    echo "   📊 Taille: $original_size → $new_size"
+    if [ -f "$input_file" ] && [ -f "$output_file" ]; then
+        original_size=$(du -h "$input_file" | cut -f1)
+        new_size=$(du -h "$output_file" | cut -f1)
+        echo "   📊 Taille: $original_size → $new_size"
+    fi
 }
 
-# Fonction pour créer une version mobile
+# Fonction pour créer une version mobile avec gestion de l'orientation
 create_mobile_version() {
     local input_file="$1"
     local mobile_file="$2"
     local mobile_width="$3"
 
     echo "📱 Création version mobile: $mobile_file"
-    convert "$input_file" -auto-orient -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
+
+    # Vérifier l'orientation de l'image source
+    local source_orientation=$(check_orientation "$input_file")
+
+    if [ "$source_orientation" != "normal" ]; then
+        echo "   🔧 Application de la correction d'orientation pour mobile..."
+        convert "$input_file" -auto-orient -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
+    else
+        convert "$input_file" -resize "${mobile_width}x>" -quality 85 -strip "$mobile_file"
+    fi
+
+    # Vérifier et corriger l'orientation du fichier mobile
+    if [ -f "$mobile_file" ]; then
+        local mobile_orientation=$(check_orientation "$mobile_file")
+        if [ "$mobile_orientation" != "normal" ]; then
+            echo "   🔧 Correction de l'orientation mobile..."
+            local temp_file="${mobile_file}.temp"
+            convert "$mobile_file" -auto-orient -quality 85 "$temp_file"
+            mv "$temp_file" "$mobile_file"
+        fi
+    fi
 }
 
 # Fonction pour créer des balises picture avec versions mobile
@@ -176,7 +249,7 @@ find assets/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \
     fi
 done
 
-echo "✅ Toutes les images ont été optimisées et références mises à jour"
+echo "✅ Toutes les images ont été optimisées avec gestion de l'orientation"
 
 # Créer les versions mobile pour les images WebP existantes qui n'en ont pas
 echo "📱 Création des versions mobile pour les images WebP existantes..."
@@ -207,86 +280,6 @@ find assets/images -name "*.webp" -type f | while read -r webp_file; do
     fi
 done
 
-# Afficher le résumé des économies
 echo ""
-echo "📈 Résumé des optimisations:"
-echo "================================"
-
-# Calculer les économies totales
-total_original=0
-total_optimized=0
-
-# Compter les fichiers originaux
-while IFS= read -r -d '' file; do
-    if [ -f "$file" ]; then
-        original_size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
-        total_original=$((total_original + original_size))
-    fi
-done < <(find assets/images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) -print0)
-
-# Compter les fichiers optimisés
-while IFS= read -r -d '' file; do
-    if [ -f "$file" ]; then
-        optimized_size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
-        total_optimized=$((total_optimized + optimized_size))
-    fi
-done < <(find assets/images -type f -name "*.webp" -print0)
-
-# Convertir en MB
-original_mb=$(echo "scale=2; $total_original / 1024 / 1024" | bc -l 2>/dev/null || echo "0")
-optimized_mb=$(echo "scale=2; $total_optimized / 1024 / 1024" | bc -l 2>/dev/null || echo "0")
-savings_mb=$(echo "scale=2; $total_original / 1024 / 1024 - $total_optimized / 1024 / 1024" | bc -l 2>/dev/null || echo "0")
-savings_percent=$(echo "scale=1; ($savings_mb / $original_mb) * 100" | bc -l 2>/dev/null || echo "0")
-
-echo "📊 Taille originale: ${original_mb} MB"
-echo "📊 Taille optimisée: ${optimized_mb} MB"
-echo "💾 Économies: ${savings_mb} MB (${savings_percent}%)"
-
-# Afficher le résumé de la taille du site
-echo ""
-echo "📈 Taille totale du site:"
-echo "================================"
-
-# Calculer et afficher la taille du dossier _site (site généré)
-if [ -d "_site" ]; then
-    site_size=$(du -sh "_site" | cut -f1)
-    echo "🌐 Site généré (_site): $site_size"
-fi
-
-# Calculer et afficher la taille du dossier assets
-if [ -d "assets" ]; then
-    assets_size=$(du -sh "assets" | cut -f1)
-    echo "📁 Dossier assets: $assets_size"
-fi
-
-# Calculer et afficher la taille totale du projet (sans _site)
-project_size=$(du -sh . --exclude=_site --exclude=.git --exclude=node_modules 2>/dev/null | cut -f1 || echo "N/A")
-echo "📦 Projet total (sans _site): $project_size"
-
-# Calculer et afficher la taille des images spécifiquement
-images_size=$(du -sh "assets/images" 2>/dev/null | cut -f1 || echo "N/A")
-echo "🖼️  Dossier images: $images_size"
-
-# Calculer et afficher la taille des images WebP
-webp_size=$(du -sh "assets/images"/*.webp "assets/images"/*/*.webp 2>/dev/null | cut -f1 || echo "N/A")
-echo "🎨 Images WebP: $webp_size"
-
-# Afficher le résumé des versions mobile
-echo ""
-echo "📱 Résumé des versions mobile:"
-echo "================================"
-mobile_count=$(find assets/images -name "*-mobile.webp" -type f | wc -l | tr -d ' ')
-echo "📱 Versions mobile créées: $mobile_count"
-
-if [ "$mobile_count" -gt 0 ]; then
-    echo "📱 Liste des versions mobile:"
-    find assets/images -name "*-mobile.webp" -type f | while read -r mobile_file; do
-        size=$(du -h "$mobile_file" | cut -f1)
-        echo "   📱 $(basename "$mobile_file") ($size)"
-    done
-fi
-
-echo ""
-echo "🎉 Optimisation et mise à jour terminées !"
-echo "💡 Toutes les références d'images ont été automatiquement mises à jour pour utiliser les fichiers .webp"
-echo "📱 Les versions mobile ont été créées pour améliorer les performances sur mobile"
+echo "🎉 Optimisation terminée avec gestion améliorée de l'orientation !"
+echo "💡 L'option -auto-orient a été appliquée pour corriger les problèmes de rotation"
