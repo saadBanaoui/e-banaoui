@@ -47,7 +47,7 @@ layout: base
     <!-- Bouton "Voir tout" -->
     {% if posts.size > 3 %}
     <div class="posts-section__footer">
-      <a href="/blog" class="button button--primary">Voir tout</a>
+      <a href="{{ '/blog' | relative_url }}" class="button button--primary">Voir tout</a>
     </div>
     {% endif %}
   {%- endif -%}
