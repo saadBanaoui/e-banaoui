@@ -55,7 +55,7 @@
     if ('fonts' in document) {
       // Monitor font loading to prevent layout shift and improve LCP
       const fonts = [
-        { family: 'Marcellus', weight: '400' },
+        { family: 'Signika', weight: '400' },
         { family: 'Source Sans 3', weight: '400' }
       ];
 
