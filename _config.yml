@@ -155,3 +155,5 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+contact_url: "/contact/"
