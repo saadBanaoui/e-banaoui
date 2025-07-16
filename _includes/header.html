@@ -8,7 +8,7 @@
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      {% include optimized-image.html src=site.author.avatar alt=site.title class="avatar" width="100" %}
+      {% include optimized-image.html src=site.author.avatar alt=site.title class="avatar" width="100" height="100" %}
       <!-- {{ site.title | escape }} -->
     </a>
 
