@@ -43,7 +43,7 @@ title: Saad El Banaoui
 email: saadelbanaoui@gmail.com
 name: Saad El Banaoui
 description: "Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l'usage, pas pour la surconsommation."
-baseurl: "/e-banaoui"  # ou "" si ton site est à la racine
+baseurl: ""  # ou "" si ton site est à la racine
 url: "https://saadbanaoui.github.io/e-banaoui/"
 github_url: "https://github.com/saadbanaoui"
 twitter_username: selbanaoui
