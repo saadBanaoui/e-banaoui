@@ -304,7 +304,7 @@ table td { border: 1px solid #e7e7e7; }
 
 .cv-container { max-width: 1200px; margin: 0 auto; background-color: #FAFAF8; border-radius: 20px; box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; overflow: hidden; }
 
-.cv-header { padding: 3rem 2rem; border-bottom: 1px solid var(--primary-color); }
+.cv-header { padding: 3rem 2rem; border-bottom: 1px solid var(--tertiary-color); }
 
 .cv-profile { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
 
