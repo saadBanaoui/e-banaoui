@@ -15,7 +15,9 @@ permalink: /moto/
       <article class="moto-post-card">
         {% if post.image %}
           <div class="moto-post-image">
+          <a href="{{ post.url | relative_url }}">
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            </a>
           </div>
         {% endif %}
         <div class="moto-post-content">
