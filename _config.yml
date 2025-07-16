@@ -130,6 +130,7 @@ minima:
   skin: classic
   nav_pages:
     - about.md
+    - services.md
     - projects.md
     - blog.md
     - moto.md

@@ -1,6 +1,9 @@
 ---
 layout: cv
 title: "CV"
+cv-name: "Hi, Je suis Saad El Banaoui  👋"
+cv-title: "Designer d'interfaces & Développeur Front-end"
+description: "Plus de 15 ans d'expérience dans la création de produits digitaux utiles, accessibles et durables"
 permalink: /about/
 ---
 

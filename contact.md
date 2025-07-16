@@ -1,14 +1,12 @@
 ---
 layout: base
-title: "Contact"
+title: "Contactez-moi"
 permalink: /contact/
+description: "Discutons de votre projet et voyons comment je peux vous aider à créer quelque chose d'extraordinaire."
 ---
 
 <div class="contact-container">
-  <div class="contact-header">
-    <h1 class="page-heading">Contactez-moi</h1>
-    <p class="contact-subtitle">Discutons de votre projet et voyons comment je peux vous aider à créer quelque chose d'extraordinaire.</p>
-  </div>
+
 
   <div class="contact-content">
     <div class="contact-info">

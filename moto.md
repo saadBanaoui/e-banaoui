@@ -5,9 +5,6 @@ description: "Découvrez mes balades moto, traces GPX, photos et récits de mes 
 permalink: /moto/
 ---
 
-# Passion Moto 🏍️
-
-Bienvenue dans ma section dédiée à ma passion pour la moto ! Ici, je partage mes balades, mes traces GPX, mes photos et mes récits d'aventures sur deux roues.
 
 ## Mes dernières balades
 

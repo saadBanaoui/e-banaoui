@@ -1841,7 +1841,7 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
    gap: 1rem;
    background: #f8f9fa;
-   padding: 1.5rem;
+   padding: .5rem;
    border-radius: 8px;
    margin-top: 1rem;
  }
@@ -2005,4 +2005,14 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
    }
  }
 
-
+.heading{
+   text-align: center;
+   h1{
+      font-size: 3rem;
+      margin-bottom: 1rem;
+   }
+   p{
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+   }
+}

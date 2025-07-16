@@ -10,7 +10,15 @@
         <div class="works__list">
             {% assign sorted_works = site.works | sort: 'order' %}
             {% for work in sorted_works %}
-            <div class="works__item">
+            <div class="works__item work-modal-trigger"
+                 data-url="{{ work.url }}"
+                 data-title="{{ work.title }}"
+                 data-type="{{ work.type }}"
+                 data-image="{{ work.image }}"
+                 data-description="{{ work.description }}"
+                 data-technologies="{{ work.technologies }}"
+                 data-duration="{{ work.duration }}"
+                 data-role="{{ work.role }}">
                 <div class="work__item--image">
                     {% include optimized-image.html src=work.image alt=work.title class="work-modal-trigger" data_url=work.url data_title=work.title data_type=work.type data_image=work.image data_description=work.description data_technologies=work.technologies data_duration=work.duration data_role=work.role %}
                 </div>

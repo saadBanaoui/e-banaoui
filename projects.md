@@ -2,17 +2,12 @@
 layout: base
 title: Projets
 permalink: /works/
+description: "Découvrez une sélection de mes projets récents, de la conception à la mise en production."
 ---
+
 
 <div class="projects-page">
   <div class="wrapper-xl">
-    <header class="projects-page__header">
-      <h1 class="projects-page__title">Mes Projets</h1>
-      <p class="projects-page__description">
-        Découvrez une sélection de mes projets récents, de la conception à la mise en production.
-      </p>
-    </header>
-
     <div class="projects-grid">
       {% assign sorted_works = site.works | sort: 'order' %}
       {% for work in sorted_works %}

@@ -2,10 +2,9 @@
 layout: base
 ---
 
+
+
 <div class="blog-page">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
 
   {{ content }}
 
@@ -19,7 +18,7 @@ layout: base
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-
+    {% assign posts = site.posts | where_exp: "post", "post.category != 'moto'" | sort: "date" | reverse %}
     <ul class="post-list">
       {%- for post in posts -%}
       <li class="post-item">

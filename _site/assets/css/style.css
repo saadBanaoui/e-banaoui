@@ -517,7 +517,7 @@ table td { border: 1px solid #e7e7e7; }
 
 .moto-post-content h3 a:hover { color: var(--primary-color); }
 
-.moto-post-meta { display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #7f8c8d; }
+.moto-post-meta { display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: #7f8c8d; flex-direction: column; }
 
 .moto-post-meta span { display: flex; align-items: center; gap: 0.3rem; }
 
@@ -943,7 +943,7 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
 
 .meta-label { font-weight: bold; margin-right: 0.5rem; }
 
-.moto-ride-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; }
+.moto-ride-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; background: #f8f9fa; padding: .5rem; border-radius: 8px; margin-top: 1rem; }
 
 .ride-stat { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
 
@@ -996,3 +996,6 @@ a, button, .works__item, .work__item--image img, .works__nav-button, .hero__titl
 @media (max-width: 768px) { .moto-post-title { font-size: 2rem; }
   .moto-ride-details { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; } }
+.heading { text-align: center; }
+.heading h1 { font-size: 3rem; margin-bottom: 1rem; }
+.heading p { font-size: 1.2rem; margin-bottom: 2rem; }

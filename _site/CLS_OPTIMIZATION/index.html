@@ -1,13 +1,167 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Optimisations CLS (Cumulative Layout Shift)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/e-banaoui/assets/css/style.css">
-  </head>
-  <body>
-    <article class="post">
+<html lang="fr"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Optimisations CLS (Cumulative Layout Shift) | Saad El Banaoui</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Optimisations CLS (Cumulative Layout Shift)" />
+<meta name="author" content="Saad El Banaoui" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="description" content="Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation." />
+<meta property="og:description" content="Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation." />
+<link rel="canonical" href="http://localhost:4000/e-banaoui/CLS_OPTIMIZATION/" />
+<meta property="og:url" content="http://localhost:4000/e-banaoui/CLS_OPTIMIZATION/" />
+<meta property="og:site_name" content="Saad El Banaoui" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimisations CLS (Cumulative Layout Shift)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Saad El Banaoui","url":"https://saadbanaoui.github.io/e-banaoui/"},"description":"Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l’usage, pas pour la surconsommation.","headline":"Optimisations CLS (Cumulative Layout Shift)","url":"http://localhost:4000/e-banaoui/CLS_OPTIMIZATION/"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Preconnect to external domains for faster resource loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Preload critical fonts with font-display: swap for better LCP -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Preload critical CSS for faster rendering -->
+  <link rel="preload" href="/e-banaoui/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link id="main-stylesheet" rel="stylesheet" href="/e-banaoui/assets/css/style.css"></noscript>
+
+  <!-- Preload critical images for LCP -->
+  <link rel="preload" href="/e-banaoui/assets/images/loogoSaad.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/e-banaoui/assets/images/bg.webp" as="image" type="image/webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/e-banaoui/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="/e-banaoui/assets/images/favicon.webp">
+  <link rel="shortcut icon" href="/e-banaoui/assets/images/favicon.ico">
+
+  <!-- Load Remix Icons with preconnect -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/e-banaoui/feed.xml" title="Saad El Banaoui" /><!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/e-banaoui/sitemap.xml">
+
+<!-- CLS Optimizer Script - Load early to prevent layout shift -->
+<script src="/e-banaoui/assets/js/cls-optimizer.js"></script>
+
+<!-- LCP Monitor Script - Development only -->
+
+<script src="/e-banaoui/assets/js/lcp-monitor.js"></script>
+
+
+<!-- CLS Monitor Script - Development only -->
+
+<script src="/e-banaoui/assets/js/cls-monitor.js"></script>
+
+
+<!-- Scroll Progress Bar Script -->
+<script src="/e-banaoui/assets/js/scroll-progress.js" defer></script>
+
+<!-- Preload critical images to prevent layout shift -->
+<link rel="preload" href="/e-banaoui/assets/images/loogoSaad.svg" as="image" type="image/svg+xml">
+<link rel="preload" href="/e-banaoui/assets/images/bg.webp" as="image" type="image/webp">
+
+<!-- Font display optimization -->
+<style>
+  /* Prevent layout shift for custom fonts */
+  @font-face {
+    font-family: 'Signika';
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-display: swap;
+  }
+
+  /* Reserve space for critical elements */
+  .site-title, .hero__title, .hero__role {
+    font-display: swap;
+  }
+</style>
+<!-- Curseur personnalisé -->
+  <script src="/e-banaoui/assets/js/custom-cursor.js" defer></script>
+
+  <!-- Navigation moderne -->
+  <script src="/e-banaoui/assets/js/navigation.js" defer></script>
+
+</head>
+<body><header class="site-header">
+
+  <!-- Progress bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <div class="header__wrapper">
+    <a class="site-title" rel="author" href="/e-banaoui/">
+      
+
+<picture>
+  <!-- Version mobile WebP si disponible -->
+  <source srcset="/e-banaoui/assets/images/loogoSaad.svg" type="image/webp" media="(max-width: 768px)">
+  <!-- Version WebP standard -->
+  <source srcset="/e-banaoui/assets/images/loogoSaad.svg" type="image/webp">
+  <!-- Fallback vers WebP standard si pas de version mobile -->
+  <img src="/e-banaoui/assets/images/loogoSaad.svg"
+       alt="Saad El Banaoui"
+       class="avatar"
+       loading="lazy"
+       width="100"
+       height="100"
+       
+       
+       
+       
+       
+       
+       
+       
+       style="aspect-ratio: 1; object-fit: cover;"
+  >
+</picture>
+      <!-- Saad El Banaoui -->
+    </a>
+      <nav class="site-nav">
+        <!-- Nouveau bouton de menu moderne -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </button>
+
+        <!-- Overlay pour mobile -->
+        <div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- Conteneur de navigation -->
+        <div class="nav-container" id="navContainer">
+          <div class="nav-items">
+  <a class="nav-item" href="/e-banaoui/about/">CV</a>
+  <a class="nav-item" href="/e-banaoui/services/">Services</a>
+  <a class="nav-item" href="/e-banaoui/works/">Projets</a>
+  <a class="nav-item" href="/e-banaoui/blog/">Blog</a>
+  <a class="nav-item" href="/e-banaoui/moto/">Passion Moto</a>
+  <a class="nav-item" href="/e-banaoui/contact/">Contactez-moi</a>
+</div>
+
+        </div>
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper-xl"><nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="/e-banaoui/" class="breadcrumb__link">
+            <i class="ri-home-line"></i>
+            <span class="breadcrumb__text">Accueil</span>
+          </a></li><li class="breadcrumb__separator" aria-hidden="true">
+          <i class="ri-arrow-right-s-line"></i>
+        </li><li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Optimisations CLS (Cumulative Layout Shift)</span></li></ol>
+</nav></div>
+      <article class="post">
 
   <header class="post-header">
     <h1 class="post-title">Optimisations CLS (Cumulative Layout Shift)</h1>
@@ -154,5 +308,58 @@ lighthouse https://localhost:4000/e-banaoui/
 
 </article>
 
-  </body>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+
+<footer class="site-footer">
+
+  <data class="u-url" value="/e-banaoui/"></data>
+
+  <div class="wrapper">
+    <img src="/e-banaoui/assets/images/loogoSaad.svg" alt="Saad El Banaoui" class="footer-logo" width="100">
+
+    <div class="footer-col-wrapper">
+      <div class="col">
+        <p class="footer-description">Saad El Banaoui conçoit et développe des interfaces sobres, accessibles et durables. Une approche du numérique pensée pour l&#39;usage, pas pour la surconsommation.</p>
+      </div>
+      <div class="col">
+          <ul class="contact-list">
+
+            <li><a class="u-email" href="mailto:saadelbanaoui@gmail.com"><i class="ri-mail-line"></i> saadelbanaoui@gmail.com</a></li>
+            <li><i class="ri-map-pin-line"></i> Valence, France</li>
+            <li><a href="tel:+33 7 61 86 10 77"><i class="ri-phone-line"></i> +33 7 61 86 10 77</a></li>
+          </ul>
+
+      </div>
+    </div>
+    <hr><ul class="social--media--list"><li>
+    <a rel="me" href="https://github.com/saadBanaoui" target="_blank" title="github">
+      <span class="ri-github-line"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://www.linkedin.com/in/saad-el-banaoui-a840742a/" target="_blank" title="linkedin">
+      <span class="ri-linkedin-line"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://x.com/selbanaoui" target="_blank" title="x">
+      <span class="ri-twitter-x-line"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://www.behance.net/saad-el-banaoui" target="_blank" title="behance">
+      <span class="ri-behance-line"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://dribbble.com/saad-el-banaoui" target="_blank" title="dribbble">
+      <span class="ri-dribbble-line"></span>
+    </a>
+  </li>
+  <li>
+    <a href="/e-banaoui/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <i class="ri-rss-line"></i>
+    </a>
+  </li>
+</ul>
+</div>
+
+</footer>
+</body>
 </html>
