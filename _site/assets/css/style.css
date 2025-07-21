@@ -540,6 +540,10 @@ table td { border: 1px solid #e7e7e7; }
 @media (max-width: 768px) { .moto-posts-grid { grid-template-columns: 1fr; }
   .moto-stats { grid-template-columns: 1fr; }
   .moto-title { font-size: 2rem; } }
+.moto-post-card .moto-post-content { padding: 1rem; }
+.moto-post-card .moto-post-content h3 { margin-top: 0; }
+.moto-post-card .moto-post-meta { display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap; margin-bottom: 0; }
+
 :root { --primary-color: #111; --secondary-color: #222; --tertiary-color: #dddddd; }
 
 body { font-family: "Source Sans 3", sans-serif; font-optical-sizing: auto; background-color: #FAFAF8; /* Prevent layout shift by ensuring minimum height */ min-height: 100vh; /* Reserve space for fonts */ font-display: swap; /* Optimize for LCP */ text-rendering: optimizeSpeed; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

@@ -1,25 +1,25 @@
 ---
 layout: moto-post
 title: "Balade dans l'Ardèche - Route des Gorges"
-description: "Une magnifique balade moto dans les gorges de l'Ardèche, entre falaises calcaires et rivière turquoise"
+description: "Une magnifique balade moto dans les gorges de l'Ardèche, entre falaises calcaires et rivière"
 category: moto
-date: 2025-01-15
+date: 2025-07-12
 distance: 180
 duration: "4h30"
 region: "Ardèche"
-weather: "Ensoleillé, 25°C"
-image: "/assets/images/moto/ardeche-gorges.jpg"
+weather: "Ensoleillé, 28°C"
+image: "/assets/images/moto/ardeche-1.webp"
 image_width: 1200
 image_height: 800
 gpx_file: "/assets/gpx/ardeche-gorges-2025-01-15.gpx"
 gallery:
-  - url: "/assets/images/moto/ardeche-1.jpg"
+  - url: "/assets/images/moto/ardeche-1.webp"
     alt: "Vue sur les gorges de l'Ardèche"
     caption: "Point de vue sur les gorges"
-  - url: "/assets/images/moto/ardeche-2.jpg"
+  - url: "/assets/images/moto/ardeche-2.webp"
     alt: "Route serpentant dans les gorges"
-    caption: "La route D290 qui longe les gorges"
-  - url: "/assets/images/moto/ardeche-3.jpg"
+    caption: "Point de vue sur les gorges"
+  - url: "/assets/images/moto/ardeche-3.webp"
     alt: "Pont d'Arc"
     caption: "Le célèbre Pont d'Arc"
 ---

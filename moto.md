@@ -22,7 +22,7 @@ permalink: /moto/
         {% endif %}
         <div class="moto-post-content">
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <div class="moto-post-meta">
+          <div class="moto-post-meta ">
             <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
             {% if post.distance %}
               <span class="distance">{{ post.distance }} km</span>
@@ -32,11 +32,11 @@ permalink: /moto/
             {% endif %}
           </div>
           <p>{{ post.description }}</p>
-          {% if post.gpx_file %}
+          <!-- {% if post.gpx_file %}
             <a href="{{ post.gpx_file | relative_url }}" class="gpx-download" download>
               📍 Télécharger le GPX
             </a>
-          {% endif %}
+          {% endif %} -->
         </div>
       </article>
     {% endfor %}
@@ -60,14 +60,14 @@ permalink: /moto/
 <div class="moto-stats">
   <div class="stat-card">
     <h4>Distance totale</h4>
-    <p class="stat-number">1041 km</p>
+    <p class="stat-number">1201 km</p>
   </div>
   <div class="stat-card">
     <h4>Balades</h4>
-    <p class="stat-number">3</p>
+    <p class="stat-number">4</p>
   </div>
   <div class="stat-card">
     <h4>Régions explorées</h4>
-    <p class="stat-number">2</p>
+    <p class="stat-number">3</p>
   </div>
 </div>

@@ -34,11 +34,21 @@ Bienvenue dans ce guide de mes balades moto, réalisées au guidon d’une <stro
 - **Départ** : Valence (via Grenoble)
 - **Fichier GPX** : `galibier-izoard-2025-01-20.gpx`
 
+### 4. Balade dans le Vercors - Gorges de la Bourne et Plateau
+- **Date** : 5 juillet 2025
+- **Distance** : 160 km
+- **Durée** : 4h00
+- **Région** : Vercors
+- **Difficulté** : ⭐⭐ (Modérée)
+- **Points d'intérêt** : Pont-en-Royans, Gorges de la Bourne, Villard-de-Lans, Autrans, Méaudre
+- **Départ** : Valence
+- **Fichier GPX** : `vercors-2025-01-25.gpx`
+
 ## 📊 Statistiques globales
 
-- **Total des balades** : 3
-- **Distance cumulée** : 1041 km
-- **Régions explorées** : 2 (Ardèche, Alpes)
+- **Total des balades** : 4
+- **Distance cumulée** : 1201 km
+- **Régions explorées** : 3 (Ardèche, Alpes, Vercors)
 - **Altitude maximale** : 2642m (Col du Galibier)
 
 ## 🗺️ Carte des régions
@@ -52,6 +62,11 @@ Bienvenue dans ce guide de mes balades moto, réalisées au guidon d’une <stro
 - **Climat** : Alpin
 - **Meilleure période** : Juin à Septembre
 - **Caractéristiques** : Cols élevés, paysages montagneux, routes techniques
+
+### Vercors
+- **Climat** : Montagnard
+- **Meilleure période** : Mai à octobre
+- **Caractéristiques** : Gorges profondes, routes suspendues, plateaux, villages typiques
 
 ## 🛣️ Conseils pour les balades
 

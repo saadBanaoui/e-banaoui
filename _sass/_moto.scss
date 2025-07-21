@@ -171,3 +171,20 @@
       font-size: 2rem;
     }
   }
+
+
+  .moto-post-card{
+    .moto-post-content{
+      padding: 1rem;
+      h3{
+        margin-top: 0;
+      }
+    }
+    .moto-post-meta{
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+     flex-wrap: wrap;
+     margin-bottom: 0;
+   }
+  }
